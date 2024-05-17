@@ -148,24 +148,24 @@
             "id": "ed146fbd-afd1-4f1d-b93d-9af9f0510f0e",
             "actions": [
                 {
-                    "name": "New action",
-                    "type": "Button",
-                    "id": "9bd4135f-81e3-4bb0-9953-7597665ba639",
-                    "expectedControlType": "Button",
+                    "name": "CameraMovement",
+                    "type": "Value",
+                    "id": "dc744142-832c-4da1-ae1b-f52584f6610d",
+                    "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
                 {
                     "name": "",
-                    "id": "dd3130cb-1f8c-44bf-9bf9-8240f029fdb4",
-                    "path": "",
+                    "id": "693c6114-4c6a-408a-b341-8f64639ece15",
+                    "path": "<Mouse>/delta",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "New action",
+                    "action": "CameraMovement",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
