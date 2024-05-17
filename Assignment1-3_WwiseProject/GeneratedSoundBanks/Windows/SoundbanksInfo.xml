@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="145">
+	<RootPaths>
+		<ProjectRoot>../..</ProjectRoot>
+		<SourceFilesRoot>../../.cache/Windows</SourceFilesRoot>
+		<SoundBanksRoot>.</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>.</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{17C96F71-B626-5EC4-A7D4-B5628D94672F}">
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+			<Plugins>
+				<AudioDevices>
+					<Plugin Id="2317455096" Name="No_Output" LibName="No Output" LibId="11862023"/>
+					<Plugin Id="3859886410" Name="System" LibName="System" LibId="11403271"/>
+				</AudioDevices>
+			</Plugins>
+			<Busses>
+				<Bus Id="3803692087" Name="Master Audio Bus"/>
+			</Busses>
+			<StateGroups>
+				<StateGroup Id="340271938" Name="walking">
+					<States>
+						<State Id="748895195" Name="None"/>
+						<State Id="4142189312" Name="street"/>
+						<State Id="4248645337" Name="grass"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
+		</SoundBank>
+		<SoundBank Id="1807884002" Type="User" Language="SFX" Hash="{E25CC0BB-ABD8-169C-FA64-03187507B7B0}">
+			<ShortName>game_audio_schoeffer</ShortName>
+			<Path>game_audio_schoeffer.bnk</Path>
+			<Media>
+				<File Id="26723888" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>StepRightGrass.wav</ShortName>
+					<CachePath>SFX/StepRightGrass_31AC151A.wem</CachePath>
+				</File>
+				<File Id="109592295" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Jump.wav</ShortName>
+					<CachePath>SFX/Jump_10C4C929.wem</CachePath>
+				</File>
+				<File Id="164863198" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Crickets.wav</ShortName>
+					<CachePath>SFX/Crickets_5DEEC275.wem</CachePath>
+				</File>
+				<File Id="189708257" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>StepLeftGrass.wav</ShortName>
+					<CachePath>SFX/StepLeftGrass_31AC151A.wem</CachePath>
+				</File>
+				<File Id="392022390" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BarkingDog.wav</ShortName>
+					<CachePath>SFX/BarkingDog_10C4C929.wem</CachePath>
+				</File>
+				<File Id="415872005" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Crickets.wav</ShortName>
+					<CachePath>SFX/Crickets_29AE521E.wem</CachePath>
+				</File>
+				<File Id="439914260" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FootStepsLeft.wav</ShortName>
+					<CachePath>SFX/FootStepsLeft_35D1DADB.wem</CachePath>
+				</File>
+				<File Id="452281267" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BassMusic.wav</ShortName>
+					<CachePath>SFX/BassMusic_A5DF8AED.wem</CachePath>
+				</File>
+				<File Id="506101012" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Damage.wav</ShortName>
+					<CachePath>SFX/Damage_10C4C929.wem</CachePath>
+				</File>
+				<File Id="619380089" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Crickets.wav</ShortName>
+					<CachePath>SFX/Crickets_50A1E827.wem</CachePath>
+				</File>
+				<File Id="733136199" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Playground.wav</ShortName>
+					<CachePath>SFX/Playground_7E2BC24F.wem</CachePath>
+				</File>
+				<File Id="788579365" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>collectCoin.wav</ShortName>
+					<CachePath>SFX/collectCoin_10C4C929.wem</CachePath>
+				</File>
+				<File Id="795206288" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Landing.wav</ShortName>
+					<CachePath>SFX/Landing_10C4C929.wem</CachePath>
+				</File>
+				<File Id="816120673" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FootStepsRight.wav</ShortName>
+					<CachePath>SFX/FootStepsRight_35D1DADB.wem</CachePath>
+				</File>
+				<File Id="882171577" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boing.wav</ShortName>
+					<CachePath>SFX/Boing_10C4C929.wem</CachePath>
+				</File>
+				<File Id="992041622" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BirdsChirping.wav</ShortName>
+					<CachePath>SFX/BirdsChirping_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="1024206037" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Doorbell.wav</ShortName>
+					<CachePath>SFX/Doorbell_10C4C929.wem</CachePath>
+				</File>
+				<File Id="1031638431" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>StreetNoises.wav</ShortName>
+					<CachePath>SFX/StreetNoises_358F59A9.wem</CachePath>
+				</File>
+			</Media>
+			<Plugins>
+				<Custom>
+					<Plugin Id="62520426" Name="Octave_Up (Custom)" LibName="Wwise Pitch Shifter" LibId="8912899"/>
+					<Plugin Id="607753830" Name="Attack_Remover (Custom)" LibName="Wwise Compressor" LibId="7077891"/>
+					<Plugin Id="1038869313" Name="Octave_Down (Custom)" LibName="Wwise Pitch Shifter" LibId="8912899"/>
+				</Custom>
+			</Plugins>
+			<Events>
+				<Event Id="693128018" Name="Play_BarkingDog" DurationType="OneShot" DurationMin="6.4914966" DurationMax="6.4914966">
+					<MediaRefs>
+						<MediaRef Id="392022390"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3933864212" Name="Play_bassMusic" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="452281267"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3025897706" Name="Play_birds" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="992041622"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3698997709" Name="Play_boing" DurationType="OneShot" DurationMin="0.50600904" DurationMax="0.50600904">
+					<MediaRefs>
+						<MediaRef Id="882171577"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2228638855" Name="Play_collectCoin" DurationType="OneShot" DurationMin="1.3192517" DurationMax="1.3192517">
+					<MediaRefs>
+						<MediaRef Id="788579365"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2626596706" Name="Play_crickets" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="164863198"/>
+						<MediaRef Id="415872005"/>
+						<MediaRef Id="619380089"/>
+					</MediaRefs>
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="62520426"/>
+							<PluginRef Id="607753830"/>
+						</Custom>
+					</PluginRefs>
+				</Event>
+				<Event Id="784302017" Name="Play_damage" DurationType="OneShot" DurationMin="1.3192517" DurationMax="1.3192517">
+					<MediaRefs>
+						<MediaRef Id="506101012"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3778958205" Name="Play_doorbell" DurationType="OneShot" DurationMin="5.3421087" DurationMax="5.3421087">
+					<MediaRefs>
+						<MediaRef Id="1024206037"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3689126666" Name="Play_jump" DurationType="OneShot" DurationMin="0.5770068" DurationMax="0.5770068">
+					<MediaRefs>
+						<MediaRef Id="109592295"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2323405115" Name="Play_landing" DurationType="OneShot" DurationMin="0.29800454" DurationMax="0.29800454">
+					<MediaRefs>
+						<MediaRef Id="795206288"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2393638833" Name="Play_playground" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="733136199"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2737802779" Name="Play_streetNoise" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="1031638431"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1733885923" Name="Play_walking" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="26723888"/>
+						<MediaRef Id="189708257"/>
+						<MediaRef Id="439914260"/>
+						<MediaRef Id="816120673"/>
+					</MediaRefs>
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="1038869313"/>
+						</Custom>
+					</PluginRefs>
+				</Event>
+			</Events>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{46FA90A0-6849-A325-0B62-B1D701D5F092}</FileHash>
+</SoundBanksInfo>

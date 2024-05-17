@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{464FDB7B-684A-42BB-8902-9535B9117D98}" SchemaVersion="110">
+	<States>
+		<WorkUnit Name="Default Work Unit" ID="{464FDB7B-684A-42BB-8902-9535B9117D98}" PersistMode="Standalone">
+			<ChildrenList>
+				<StateGroup Name="walking" ID="{385A42ED-7BB3-40E7-95FC-957D9E1DB1FC}">
+					<ChildrenList>
+						<State Name="None" ID="{89DD0E9E-DEC3-49B8-81B6-F7A21BB6F74D}"/>
+						<State Name="grass" ID="{6CFBFA59-E8EF-4B38-BC73-E3885BE1AAED}"/>
+						<State Name="street" ID="{39F2E3AA-AE3B-4178-9994-1777F9D7F2FD}"/>
+					</ChildrenList>
+					<TransitionList>
+						<Transition>
+							<StartState Name="street" ID="{39F2E3AA-AE3B-4178-9994-1777F9D7F2FD}"/>
+							<EndState Name="grass" ID="{6CFBFA59-E8EF-4B38-BC73-E3885BE1AAED}"/>
+							<Time>0</Time>
+							<IsShared>false</IsShared>
+						</Transition>
+						<Transition>
+							<StartState Name="grass" ID="{6CFBFA59-E8EF-4B38-BC73-E3885BE1AAED}"/>
+							<EndState Name="street" ID="{39F2E3AA-AE3B-4178-9994-1777F9D7F2FD}"/>
+							<Time>0</Time>
+							<IsShared>false</IsShared>
+						</Transition>
+					</TransitionList>
+				</StateGroup>
+			</ChildrenList>
+		</WorkUnit>
+	</States>
+</WwiseDocument>

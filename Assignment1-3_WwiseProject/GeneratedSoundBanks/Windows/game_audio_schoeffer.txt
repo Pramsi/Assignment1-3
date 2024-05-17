@@ -1,0 +1,52 @@
+Event	ID	Name			Wwise Object Path	Notes
+	693128018	Play_BarkingDog			\Default Work Unit\Play_BarkingDog	
+	784302017	Play_damage			\Default Work Unit\Play_damage	
+	1733885923	Play_walking			\Default Work Unit\Play_walking	
+	2228638855	Play_collectCoin			\Default Work Unit\Play_collectCoin	
+	2323405115	Play_landing			\Default Work Unit\Play_landing	
+	2393638833	Play_playground			\Default Work Unit\Play_playground	
+	2626596706	Play_crickets			\Default Work Unit\Play_crickets	
+	2737802779	Play_streetNoise			\Default Work Unit\Play_streetNoise	
+	3025897706	Play_birds			\Default Work Unit\Play_birds	
+	3689126666	Play_jump			\Default Work Unit\Play_jump	
+	3698997709	Play_boing			\Default Work Unit\Play_boing	
+	3778958205	Play_doorbell			\Default Work Unit\Play_doorbell	
+	3933864212	Play_bassMusic			\Default Work Unit\Play_bassMusic	
+
+State Group	ID	Name			Wwise Object Path	Notes
+	340271938	walking			\Default Work Unit\walking	
+
+State	ID	Name	State Group			Notes
+	748895195	None	walking			
+	4142189312	street	walking			
+	4248645337	grass	walking			
+
+Custom State	ID	Name	State Group	Owner		Notes
+	400466812	grass	walking	\Actor-Mixer Hierarchy\Default Work Unit\walking\walkingStreet		
+	959908152	street	walking	\Actor-Mixer Hierarchy\Default Work Unit\walking\walkingGrass		
+
+Effect plug-ins	ID	Name	Type				Notes
+	62520426	Octave_Up (Custom)	Wwise Pitch Shifter			
+	607753830	Attack_Remover (Custom)	Wwise Compressor			
+	1038869313	Octave_Down (Custom)	Wwise Pitch Shifter			
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	26723888	StepRightGrass	C:\Users\Manuel\OneDrive - Fachhochschule St. Pölten\Studium\Semester 4\ECRD\Assignment1-3\Assignment1-3\Assignment1-3_WwiseProject\.cache\Windows\SFX\StepRightGrass_31AC151A.wem		\Actor-Mixer Hierarchy\Default Work Unit\walking\walkingGrass\StepRightGrass		79476
+	109592295	Jump	C:\Users\Manuel\OneDrive - Fachhochschule St. Pölten\Studium\Semester 4\ECRD\Assignment1-3\Assignment1-3\Assignment1-3_WwiseProject\.cache\Windows\SFX\Jump_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\jump\Jump		101880
+	164863198	Crickets_02	C:\Users\Manuel\OneDrive - Fachhochschule St. Pölten\Studium\Semester 4\ECRD\Assignment1-3\Assignment1-3\Assignment1-3_WwiseProject\.cache\Windows\SFX\Crickets_5DEEC275.wem		\Actor-Mixer Hierarchy\Default Work Unit\crickets\Crickets_02		357316
+	189708257	StepLeftGrass	C:\Users\Manuel\OneDrive - Fachhochschule St. Pölten\Studium\Semester 4\ECRD\Assignment1-3\Assignment1-3\Assignment1-3_WwiseProject\.cache\Windows\SFX\StepLeftGrass_31AC151A.wem		\Actor-Mixer Hierarchy\Default Work Unit\walking\walkingGrass\StepLeftGrass		79476
+	392022390	BarkingDog	C:\Users\Manuel\OneDrive - Fachhochschule St. Pölten\Studium\Semester 4\ECRD\Assignment1-3\Assignment1-3\Assignment1-3_WwiseProject\.cache\Windows\SFX\BarkingDog_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\dogBark\BarkingDog		1145196
+	415872005	Crickets	C:\Users\Manuel\OneDrive - Fachhochschule St. Pölten\Studium\Semester 4\ECRD\Assignment1-3\Assignment1-3\Assignment1-3_WwiseProject\.cache\Windows\SFX\Crickets_29AE521E.wem		\Actor-Mixer Hierarchy\Default Work Unit\crickets\Crickets		572916
+	439914260	FootStepsLeft	C:\Users\Manuel\OneDrive - Fachhochschule St. Pölten\Studium\Semester 4\ECRD\Assignment1-3\Assignment1-3\Assignment1-3_WwiseProject\.cache\Windows\SFX\FootStepsLeft_35D1DADB.wem		\Actor-Mixer Hierarchy\Default Work Unit\walking\walkingStreet\FootStepsLeft		79476
+	452281267	BassMusic	C:\Users\Manuel\OneDrive - Fachhochschule St. Pölten\Studium\Semester 4\ECRD\Assignment1-3\Assignment1-3\Assignment1-3_WwiseProject\.cache\Windows\SFX\BassMusic_A5DF8AED.wem		\Actor-Mixer Hierarchy\Default Work Unit\bassMusic\BassMusic		33352092
+	506101012	Damage	C:\Users\Manuel\OneDrive - Fachhochschule St. Pölten\Studium\Semester 4\ECRD\Assignment1-3\Assignment1-3\Assignment1-3_WwiseProject\.cache\Windows\SFX\Damage_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\damage\Damage		232812
+	619380089	Crickets_01	C:\Users\Manuel\OneDrive - Fachhochschule St. Pölten\Studium\Semester 4\ECRD\Assignment1-3\Assignment1-3\Assignment1-3_WwiseProject\.cache\Windows\SFX\Crickets_50A1E827.wem		\Actor-Mixer Hierarchy\Default Work Unit\crickets\Crickets_01		148056
+	733136199	Playground	C:\Users\Manuel\OneDrive - Fachhochschule St. Pölten\Studium\Semester 4\ECRD\Assignment1-3\Assignment1-3\Assignment1-3_WwiseProject\.cache\Windows\SFX\Playground_7E2BC24F.wem		\Actor-Mixer Hierarchy\Default Work Unit\playground\Playground		3012156
+	788579365	collectCoin	C:\Users\Manuel\OneDrive - Fachhochschule St. Pölten\Studium\Semester 4\ECRD\Assignment1-3\Assignment1-3\Assignment1-3_WwiseProject\.cache\Windows\SFX\collectCoin_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\collectCoin\collectCoin		232812
+	795206288	Landing	C:\Users\Manuel\OneDrive - Fachhochschule St. Pölten\Studium\Semester 4\ECRD\Assignment1-3\Assignment1-3\Assignment1-3_WwiseProject\.cache\Windows\SFX\Landing_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\landing\Landing		52664
+	816120673	FootStepsRight	C:\Users\Manuel\OneDrive - Fachhochschule St. Pölten\Studium\Semester 4\ECRD\Assignment1-3\Assignment1-3\Assignment1-3_WwiseProject\.cache\Windows\SFX\FootStepsRight_35D1DADB.wem		\Actor-Mixer Hierarchy\Default Work Unit\walking\walkingStreet\FootStepsRight		79476
+	882171577	Boing	C:\Users\Manuel\OneDrive - Fachhochschule St. Pölten\Studium\Semester 4\ECRD\Assignment1-3\Assignment1-3\Assignment1-3_WwiseProject\.cache\Windows\SFX\Boing_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\boing\Boing		89356
+	992041622	BirdsChirping	C:\Users\Manuel\OneDrive - Fachhochschule St. Pölten\Studium\Semester 4\ECRD\Assignment1-3\Assignment1-3\Assignment1-3_WwiseProject\.cache\Windows\SFX\BirdsChirping_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\birds\BirdsChirping		10140080
+	1024206037	Doorbell	C:\Users\Manuel\OneDrive - Fachhochschule St. Pölten\Studium\Semester 4\ECRD\Assignment1-3\Assignment1-3\Assignment1-3_WwiseProject\.cache\Windows\SFX\Doorbell_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\doorbell\Doorbell		942444
+	1031638431	StreetNoises	C:\Users\Manuel\OneDrive - Fachhochschule St. Pölten\Studium\Semester 4\ECRD\Assignment1-3\Assignment1-3\Assignment1-3_WwiseProject\.cache\Windows\SFX\StreetNoises_358F59A9.wem		\Actor-Mixer Hierarchy\Default Work Unit\streetNoise\StreetNoises		2146872
+

@@ -1,0 +1,15 @@
+State Group	ID	Name			Wwise Object Path	Notes
+	340271938	walking			\Default Work Unit\walking	
+
+State	ID	Name	State Group			Notes
+	748895195	None	walking			
+	4142189312	street	walking			
+	4248645337	grass	walking			
+
+Audio Bus	ID	Name			Wwise Object Path	Notes
+	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+
+Audio Devices	ID	Name	Type				Notes
+	2317455096	No_Output	No Output			
+	3859886410	System	System			
+

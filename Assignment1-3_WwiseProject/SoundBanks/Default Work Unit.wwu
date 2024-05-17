@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{A45F4141-4DA4-45DA-83E7-27475494AFD3}" SchemaVersion="110">
+	<SoundBanks>
+		<WorkUnit Name="Default Work Unit" ID="{A45F4141-4DA4-45DA-83E7-27475494AFD3}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="game_audio_schoeffer" ID="{62A80494-30E1-4D43-8406-268103EF5260}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Play_doorbell" ID="{565E8A2F-F176-40DD-80C6-3D231D367B02}" WorkUnitID="{0854544D-B014-4E6E-AF7F-910C0B4C3577}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_jump" ID="{B528D5C7-937D-4132-8318-93C264C20C0F}" WorkUnitID="{0854544D-B014-4E6E-AF7F-910C0B4C3577}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_bassMusic" ID="{8AE9F809-FE8A-422D-97D2-E88796E85D98}" WorkUnitID="{0854544D-B014-4E6E-AF7F-910C0B4C3577}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_birds" ID="{5A291FEA-C1B9-43AA-87B6-E84D35D4321B}" WorkUnitID="{0854544D-B014-4E6E-AF7F-910C0B4C3577}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_streetNoise" ID="{417D7255-E51F-44A0-A92C-F7E617564E73}" WorkUnitID="{0854544D-B014-4E6E-AF7F-910C0B4C3577}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_boing" ID="{F6AA8792-2669-4751-8D84-1FEE9C4910FA}" WorkUnitID="{0854544D-B014-4E6E-AF7F-910C0B4C3577}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_collectCoin" ID="{7C6F868F-3FB5-484A-A58E-D34BB0FDBE36}" WorkUnitID="{0854544D-B014-4E6E-AF7F-910C0B4C3577}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_crickets" ID="{BF20FE39-DE78-4A31-B026-7F8967737200}" WorkUnitID="{0854544D-B014-4E6E-AF7F-910C0B4C3577}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_damage" ID="{E8CCE9B8-6E61-4DD4-A6FF-8BFCBF9A45A7}" WorkUnitID="{0854544D-B014-4E6E-AF7F-910C0B4C3577}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_landing" ID="{86C49D9E-5027-4DE3-A9E0-7F5EA9E571C8}" WorkUnitID="{0854544D-B014-4E6E-AF7F-910C0B4C3577}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_walking" ID="{58DA473C-39DF-4DFF-BD34-0A5CC1FE4FDB}" WorkUnitID="{0854544D-B014-4E6E-AF7F-910C0B4C3577}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_playground" ID="{FF83F85B-05A4-4E88-BCC0-3A954A872921}" WorkUnitID="{0854544D-B014-4E6E-AF7F-910C0B4C3577}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_BarkingDog" ID="{EFB5DB67-9212-4EB0-80C0-5A8178E28D6C}" WorkUnitID="{0854544D-B014-4E6E-AF7F-910C0B4C3577}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundBanks>
+</WwiseDocument>
