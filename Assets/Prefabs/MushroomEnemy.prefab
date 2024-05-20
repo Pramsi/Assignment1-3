@@ -99,7 +99,7 @@ GameObject:
   - component: {fileID: 137853915463799928}
   - component: {fileID: 6793532117478678723}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: JumpTrigger
   m_TagString: Jump
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -113,7 +113,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3215099593046622876}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.191, z: 0.034}
+  m_LocalPosition: {x: -0.021, y: 0.191, z: -0.089}
   m_LocalScale: {x: 0.7106663, y: 0.10786607, z: 0.683679}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -189,8 +189,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
-  m_Center: {x: -0.0000009536743, y: 0.000000007450581, z: 0.0000019073486}
+  m_Size: {x: 0.5750626, y: 0.9999999, z: 0.57776004}
+  m_Center: {x: 0.069945484, y: 0, z: 0.110403046}
 --- !u!1 &5896292659680634229
 GameObject:
   m_ObjectHideFlags: 0
@@ -203,7 +203,7 @@ GameObject:
   - component: {fileID: 1861897728320537355}
   - component: {fileID: 7478835383963136120}
   m_Layer: 0
-  m_Name: Cylinder
+  m_Name: MushroomBody
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
