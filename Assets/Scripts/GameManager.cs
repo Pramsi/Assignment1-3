@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
 
 
-    [SerializeField] private int health;
+    [SerializeField] private int health = 5;
     [SerializeField] private int collectedCoins;
 
     private bool _gameWon = false;
@@ -15,9 +15,17 @@ public class GameManager : MonoBehaviour
 
     public int GetHealth() => health;
 
-    public void DecreaseHealth(int decreaseBy) => health -= decreaseBy;
-    public void IncreaseHealth(int increaseBy) => health += increaseBy;
+    public void DecreaseHealth(int decreaseBy)
+    {
+        health -= decreaseBy;
+        AkSoundEngine.SetRTPCValue("health", health);  // Update RTPC value when health changes
+    }
 
+    public void IncreaseHealth(int increaseBy)
+    {
+        health += increaseBy;
+        AkSoundEngine.SetRTPCValue("health", health);  // Update RTPC value when health changes
+    }
     public int GetCoins() => collectedCoins;
 
     public void DecreaseCoins(int decreaseBy) => collectedCoins -= decreaseBy;
@@ -30,6 +38,9 @@ public class GameManager : MonoBehaviour
             return;
         instance = this;
         DontDestroyOnLoad(this.gameObject);
+
+        AkSoundEngine.SetRTPCValue("health", health);  // Set initial RTPC value
+        AkSoundEngine.PostEvent("Play_heartbeat", this.gameObject);  // Post event to start heartbeat sound
     }
 
     // Update is called once per frame
@@ -39,7 +50,7 @@ public class GameManager : MonoBehaviour
         {
             if (_winMessage < 1)
             {
-             Debug.ClearDeveloperConsole();
+            Debug.ClearDeveloperConsole();
             Debug.Log("You Win");
             _gameWon = true;   
             }
@@ -49,6 +60,7 @@ public class GameManager : MonoBehaviour
 
         if (!_gameWon)
         {
+        
         Debug.Log("Collected Coins: " + collectedCoins);
         Debug.Log("Current Health: " + health);
         }

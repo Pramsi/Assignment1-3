@@ -13,6 +13,7 @@
 						<ObjectRef Name="Play_boing" ID="{F6AA8792-2669-4751-8D84-1FEE9C4910FA}" WorkUnitID="{0854544D-B014-4E6E-AF7F-910C0B4C3577}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_collectCoin" ID="{7C6F868F-3FB5-484A-A58E-D34BB0FDBE36}" WorkUnitID="{0854544D-B014-4E6E-AF7F-910C0B4C3577}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_crickets" ID="{BF20FE39-DE78-4A31-B026-7F8967737200}" WorkUnitID="{0854544D-B014-4E6E-AF7F-910C0B4C3577}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_heartbeat" ID="{214D9019-528B-4B0E-9E87-76502AAB7213}" WorkUnitID="{0854544D-B014-4E6E-AF7F-910C0B4C3577}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_damage" ID="{E8CCE9B8-6E61-4DD4-A6FF-8BFCBF9A45A7}" WorkUnitID="{0854544D-B014-4E6E-AF7F-910C0B4C3577}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_landing" ID="{86C49D9E-5027-4DE3-A9E0-7F5EA9E571C8}" WorkUnitID="{0854544D-B014-4E6E-AF7F-910C0B4C3577}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_walking" ID="{58DA473C-39DF-4DFF-BD34-0A5CC1FE4FDB}" WorkUnitID="{0854544D-B014-4E6E-AF7F-910C0B4C3577}" Origin="Manual" Filter="7"/>

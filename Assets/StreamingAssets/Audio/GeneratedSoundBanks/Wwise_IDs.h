@@ -21,6 +21,7 @@ namespace AK
         static const AkUniqueID PLAY_CRICKETS = 2626596706U;
         static const AkUniqueID PLAY_DAMAGE = 784302017U;
         static const AkUniqueID PLAY_DOORBELL = 3778958205U;
+        static const AkUniqueID PLAY_HEARTBEAT = 3765695918U;
         static const AkUniqueID PLAY_JUMP = 3689126666U;
         static const AkUniqueID PLAY_LANDING = 2323405115U;
         static const AkUniqueID PLAY_PLAYGROUND = 2393638833U;
@@ -43,6 +44,11 @@ namespace AK
         } // namespace WALKING
 
     } // namespace STATES
+
+    namespace GAME_PARAMETERS
+    {
+        static const AkUniqueID HEALTH = 3677180323U;
+    } // namespace GAME_PARAMETERS
 
     namespace BANKS
     {

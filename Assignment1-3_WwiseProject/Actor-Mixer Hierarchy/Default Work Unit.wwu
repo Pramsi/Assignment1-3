@@ -924,6 +924,76 @@
 						</CustomStateList>
 					</StateInfo>
 				</BlendContainer>
+				<Sound Name="heartbeat" ID="{062772BB-DB38-40D0-BF66-AF3A6762D251}" ShortID="447839080">
+					<PropertyList>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2CED83F5-9D66-4DE4-9941-C5F401994CC1}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4DBC27A7-B3B6-41EA-B217-ED60E12C521B}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Hearbeat" ID="{5E1E09C5-BAB2-4B3B-8E7C-6F6CE5088EBB}">
+							<Language>SFX</Language>
+							<AudioFile>Hearbeat.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="347083891"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists>
+						<ObjectList Name="RTPC">
+							<Reference>
+								<Local>
+									<RTPC Name="" ID="{2AC8D595-2445-4733-B75F-B3BB89DE4F74}" ShortID="430489286">
+										<PropertyList>
+											<Property Name="PropertyName" Type="string" Value="Volume"/>
+										</PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="health" ID="{01B806E8-4E09-433A-B690-AE066460E212}" WorkUnitID="{8B84DB6F-E2B2-4553-A1A6-AC5471A67150}"/>
+											</Reference>
+											<Reference Name="Curve">
+												<Custom>
+													<Curve Name="" ID="{47AED22B-D788-4305-9FB7-B4068B74DA32}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="3"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>0</YPos>
+																<Flags>5</Flags>
+																<SegmentShape>Log1</SegmentShape>
+															</Point>
+															<Point>
+																<XPos>3.00689</XPos>
+																<YPos>-200</YPos>
+																<Flags>0</Flags>
+															</Point>
+															<Point>
+																<XPos>5</XPos>
+																<YPos>-200</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</Custom>
+											</Reference>
+										</ReferenceList>
+									</RTPC>
+								</Local>
+							</Reference>
+						</ObjectList>
+					</ObjectLists>
+					<ActiveSourceList>
+						<ActiveSource Name="Hearbeat" ID="{5E1E09C5-BAB2-4B3B-8E7C-6F6CE5088EBB}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

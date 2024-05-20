@@ -157,6 +157,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_heartbeat" ID="{214D9019-528B-4B0E-9E87-76502AAB7213}">
+					<ChildrenList>
+						<Action Name="" ID="{F239207C-719A-4780-AE48-C4E59E525B87}" ShortID="62419858">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="heartbeat" ID="{062772BB-DB38-40D0-BF66-AF3A6762D251}" WorkUnitID="{E010585B-9E22-4CBC-BB34-6261D83B36AB}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

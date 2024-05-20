@@ -39,7 +39,6 @@ public class Movement : MonoBehaviour
 
     private int walkingId = -1;
     private int movementKeysPressed = 0;
-    
 
     // Start is called before the first frame update
     void Start()
@@ -49,7 +48,7 @@ public class Movement : MonoBehaviour
         AkSoundEngine.PostEvent("Play_birds", gameObject);
         AkSoundEngine.PostEvent("Play_crickets", gameObject);
         AkSoundEngine.PostEvent("Play_streetNoise", gameObject);
-
+       
     }
 
     // Update is called once per frame
@@ -65,7 +64,7 @@ public class Movement : MonoBehaviour
         {
             _isMoving= false;   
         }
-
+        
     }
 
     void PerformMovement()
@@ -174,6 +173,8 @@ public class Movement : MonoBehaviour
         if (other.gameObject.tag == "Coin")
         {
             AkSoundEngine.PostEvent("Play_collectCoin", gameObject);
+            AkSoundEngine.SetRTPCValue("health", 0);
+            AkSoundEngine.PostEvent("Play_heartbeat", gameObject);
         }
 
         if (other.gameObject.tag == "Playground")

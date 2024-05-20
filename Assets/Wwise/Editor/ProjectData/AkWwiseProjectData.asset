@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 41415fa4a44dda4583e727475494afd3
     GuidInternal: 
-    m_lastTime: -8584856803293941837
+    m_lastTime: -8584854078572199352
     List:
     - name: game_audio_schoeffer
       guid: 9404a862e130434d8406268103ef5260
@@ -94,7 +94,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 4d54540814b06e4eaf7f910c0b4c3577
     GuidInternal: 
-    m_lastTime: -8584856803319243693
+    m_lastTime: -8584854078572148163
     List:
     - name: Play_BarkingDog
       guid: 67dbb5ef1292b04e80c05a8178e28d6c
@@ -232,6 +232,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 5.3421087
       minDuration: 5.3421087
+    - name: Play_hearbeat
+      guid: 6f9df04730ace44990c667ea5a30bf81
+      id: 2159900270
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 4d54540814b06e4eaf7f910c0b4c3577
+      - ElementName: Play_hearbeat
+        ObjectType: 3
+        guid: 6f9df04730ace44990c667ea5a30bf81
+      Path: Events\Default Work Unit\Play_hearbeat
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Play_jump
       guid: c7d528b57d933241831893c264c20c0f
       id: 3689126666
@@ -346,8 +363,22 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 6fdb848bb2e25345a1a6ac5471a67150
     GuidInternal: 
-    m_lastTime: -8584856803319233694
-    List: []
+    m_lastTime: -8584854101090399209
+    List:
+    - name: health
+      guid: e806b801094e3a43b690ae066460e212
+      id: 3677180323
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 6fdb848bb2e25345a1a6ac5471a67150
+      - ElementName: health
+        ObjectType: 13
+        guid: e806b801094e3a43b690ae066460e212
+      Path: Game Parameters\Default Work Unit\health
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     PathAndIcons:
@@ -457,7 +488,7 @@ MonoBehaviour:
     m_lastTime: -8584856803293151775
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 06000000070000000c0000000d000000150000001600000022000000
+  ExpandedWaapiItemIds: 06000000070000000c0000000d0000001500000016000000170000001a0000001b000000220000002300000024000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

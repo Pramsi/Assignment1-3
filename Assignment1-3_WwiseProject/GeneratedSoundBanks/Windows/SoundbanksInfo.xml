@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{17C96F71-B626-5EC4-A7D4-B5628D94672F}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{15D4E224-0955-F795-9F64-BDCC6CF57A56}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -21,6 +21,9 @@
 			<Busses>
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
 			</Busses>
+			<GameParameters>
+				<GameParameter Id="3677180323" Name="health"/>
+			</GameParameters>
 			<StateGroups>
 				<StateGroup Id="340271938" Name="walking">
 					<States>
@@ -31,7 +34,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="1807884002" Type="User" Language="SFX" Hash="{E25CC0BB-ABD8-169C-FA64-03187507B7B0}">
+		<SoundBank Id="1807884002" Type="User" Language="SFX" Hash="{3B66A2B3-3366-B7C9-69AE-6FD9BE1FC368}">
 			<ShortName>game_audio_schoeffer</ShortName>
 			<Path>game_audio_schoeffer.bnk</Path>
 			<Media>
@@ -50,6 +53,10 @@
 				<File Id="189708257" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>StepLeftGrass.wav</ShortName>
 					<CachePath>SFX/StepLeftGrass_31AC151A.wem</CachePath>
+				</File>
+				<File Id="347083891" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Hearbeat.wav</ShortName>
+					<CachePath>SFX/Hearbeat_D79FB2B7.wem</CachePath>
 				</File>
 				<File Id="392022390" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>BarkingDog.wav</ShortName>
@@ -164,6 +171,11 @@
 						<MediaRef Id="1024206037"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="3765695918" Name="Play_heartbeat" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="347083891"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="3689126666" Name="Play_jump" DurationType="OneShot" DurationMin="0.5770068" DurationMax="0.5770068">
 					<MediaRefs>
 						<MediaRef Id="109592295"/>
@@ -198,7 +210,10 @@
 					</PluginRefs>
 				</Event>
 			</Events>
+			<GameParameters>
+				<GameParameter Id="3677180323" Name="health"/>
+			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{46FA90A0-6849-A325-0B62-B1D701D5F092}</FileHash>
+	<FileHash>{FF73F026-2D58-B6D2-2130-D45672EB84D7}</FileHash>
 </SoundBanksInfo>
