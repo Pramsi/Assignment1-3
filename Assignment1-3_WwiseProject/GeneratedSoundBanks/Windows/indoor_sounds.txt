@@ -1,0 +1,11 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1088904858	Play_takingOrder			\Default Work Unit\Play_takingOrder	
+	1945722105	Play_Bell			\Default Work Unit\Play_Bell	
+	2171456575	Play_RestaurantAmbience			\Default Work Unit\Play_RestaurantAmbience	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	278201078	Hello	C:\Users\Manuel\Desktop\FinalProjectGameAudio\Assignment1-3\Assignment1-3_WwiseProject\.cache\Windows\SFX\Hello_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\takingOrder\Hello		176496
+	543620922	RestaurantAmbience	C:\Users\Manuel\Desktop\FinalProjectGameAudio\Assignment1-3\Assignment1-3_WwiseProject\.cache\Windows\SFX\RestaurantAmbience_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\RestaurantAmbience		5011444
+	592439996	Bell	C:\Users\Manuel\Desktop\FinalProjectGameAudio\Assignment1-3\Assignment1-3_WwiseProject\.cache\Windows\SFX\Bell_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Bell		441096
+	1068521209	TakingOrder	C:\Users\Manuel\Desktop\FinalProjectGameAudio\Assignment1-3\Assignment1-3_WwiseProject\.cache\Windows\SFX\TakingOrder_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\takingOrder\TakingOrder		386764
+

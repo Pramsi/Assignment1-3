@@ -148,6 +148,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _velocity: 1
+  _jumpPower: 5
+  _selectedForceMode: 0
+  movementType: 0
 --- !u!114 &7141108453425288250
 MonoBehaviour:
   m_ObjectHideFlags: 0

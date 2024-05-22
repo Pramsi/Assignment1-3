@@ -13,8 +13,10 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID PLAY_BACKGROUND = 3196207338U;
         static const AkUniqueID PLAY_BARKINGDOG = 693128018U;
         static const AkUniqueID PLAY_BASSMUSIC = 3933864212U;
+        static const AkUniqueID PLAY_BELL = 1945722105U;
         static const AkUniqueID PLAY_BIRDS = 3025897706U;
         static const AkUniqueID PLAY_BOING = 3698997709U;
         static const AkUniqueID PLAY_COLLECTCOIN = 2228638855U;
@@ -25,25 +27,47 @@ namespace AK
         static const AkUniqueID PLAY_JUMP = 3689126666U;
         static const AkUniqueID PLAY_LANDING = 2323405115U;
         static const AkUniqueID PLAY_PLAYGROUND = 2393638833U;
+        static const AkUniqueID PLAY_RESTAURANTAMBIENCE = 2171456575U;
         static const AkUniqueID PLAY_STREETNOISE = 2737802779U;
+        static const AkUniqueID PLAY_TAKINGORDER = 1088904858U;
         static const AkUniqueID PLAY_WALKING = 1733885923U;
+        static const AkUniqueID PLAY_WALKINGGRASS = 1338644939U;
+        static const AkUniqueID PLAY_WALKINGSTREET = 3403293142U;
+        static const AkUniqueID PLAY_WALKINGWOOD = 4029360244U;
+        static const AkUniqueID PLAY_WINNINGMUSIC = 3756431007U;
     } // namespace EVENTS
 
     namespace STATES
+    {
+        namespace BACKGROUND
+        {
+            static const AkUniqueID GROUP = 3650723969U;
+
+            namespace STATE
+            {
+                static const AkUniqueID BACKGROUNDNOISE = 2350060149U;
+                static const AkUniqueID NONE = 748895195U;
+                static const AkUniqueID WINNINGMUSIC = 4067680020U;
+            } // namespace STATE
+        } // namespace BACKGROUND
+
+    } // namespace STATES
+
+    namespace SWITCHES
     {
         namespace WALKING
         {
             static const AkUniqueID GROUP = 340271938U;
 
-            namespace STATE
+            namespace SWITCH
             {
                 static const AkUniqueID GRASS = 4248645337U;
-                static const AkUniqueID NONE = 748895195U;
                 static const AkUniqueID STREET = 4142189312U;
-            } // namespace STATE
+                static const AkUniqueID WOOD = 2058049674U;
+            } // namespace SWITCH
         } // namespace WALKING
 
-    } // namespace STATES
+    } // namespace SWITCHES
 
     namespace GAME_PARAMETERS
     {
@@ -54,6 +78,7 @@ namespace AK
     {
         static const AkUniqueID INIT = 1355168291U;
         static const AkUniqueID GAME_AUDIO_SCHOEFFER = 1807884002U;
+        static const AkUniqueID INDOOR_SOUNDS = 3254967171U;
     } // namespace BANKS
 
     namespace BUSSES

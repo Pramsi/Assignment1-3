@@ -3,22 +3,25 @@
 	<States>
 		<WorkUnit Name="Default Work Unit" ID="{464FDB7B-684A-42BB-8902-9535B9117D98}" PersistMode="Standalone">
 			<ChildrenList>
-				<StateGroup Name="walking" ID="{385A42ED-7BB3-40E7-95FC-957D9E1DB1FC}">
+				<StateGroup Name="background" ID="{392D8106-868F-49DD-8E21-403E3F1F2F1B}">
+					<PropertyList>
+						<Property Name="DefaultTransitionTime" Type="Real64" Value="0"/>
+					</PropertyList>
 					<ChildrenList>
-						<State Name="None" ID="{89DD0E9E-DEC3-49B8-81B6-F7A21BB6F74D}"/>
-						<State Name="grass" ID="{6CFBFA59-E8EF-4B38-BC73-E3885BE1AAED}"/>
-						<State Name="street" ID="{39F2E3AA-AE3B-4178-9994-1777F9D7F2FD}"/>
+						<State Name="None" ID="{D6E7DEE1-7278-47B4-BE89-0B57C03A29A2}"/>
+						<State Name="backgroundNoise" ID="{2B30C0A2-8E9C-4880-BAEC-0022878DD381}"/>
+						<State Name="winningMusic" ID="{E0768E3E-2A55-4A3D-94BE-6B097C4BA4F0}"/>
 					</ChildrenList>
 					<TransitionList>
 						<Transition>
-							<StartState Name="street" ID="{39F2E3AA-AE3B-4178-9994-1777F9D7F2FD}"/>
-							<EndState Name="grass" ID="{6CFBFA59-E8EF-4B38-BC73-E3885BE1AAED}"/>
+							<StartState Name="backgroundNoise" ID="{2B30C0A2-8E9C-4880-BAEC-0022878DD381}"/>
+							<EndState Name="winningMusic" ID="{E0768E3E-2A55-4A3D-94BE-6B097C4BA4F0}"/>
 							<Time>0</Time>
 							<IsShared>false</IsShared>
 						</Transition>
 						<Transition>
-							<StartState Name="grass" ID="{6CFBFA59-E8EF-4B38-BC73-E3885BE1AAED}"/>
-							<EndState Name="street" ID="{39F2E3AA-AE3B-4178-9994-1777F9D7F2FD}"/>
+							<StartState Name="winningMusic" ID="{E0768E3E-2A55-4A3D-94BE-6B097C4BA4F0}"/>
+							<EndState Name="backgroundNoise" ID="{2B30C0A2-8E9C-4880-BAEC-0022878DD381}"/>
 							<Time>0</Time>
 							<IsShared>false</IsShared>
 						</Transition>

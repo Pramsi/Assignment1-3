@@ -146,23 +146,122 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Play_walking" ID="{58DA473C-39DF-4DFF-BD34-0A5CC1FE4FDB}">
-					<ChildrenList>
-						<Action Name="" ID="{E1E855CB-6329-4808-BC0B-9C2F454DC934}" ShortID="894661215">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="walking" ID="{DF3899A8-A9E7-46C5-B42F-8E065A20D404}" WorkUnitID="{E010585B-9E22-4CBC-BB34-6261D83B36AB}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
 				<Event Name="Play_heartbeat" ID="{214D9019-528B-4B0E-9E87-76502AAB7213}">
 					<ChildrenList>
 						<Action Name="" ID="{F239207C-719A-4780-AE48-C4E59E525B87}" ShortID="62419858">
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="heartbeat" ID="{062772BB-DB38-40D0-BF66-AF3A6762D251}" WorkUnitID="{E010585B-9E22-4CBC-BB34-6261D83B36AB}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_RestaurantAmbience" ID="{EC877E45-D798-4E43-BC46-3853904FE3CD}">
+					<ChildrenList>
+						<Action Name="" ID="{2EDC7D11-E966-4541-AF29-0E21AADB9D04}" ShortID="722620313">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RestaurantAmbience" ID="{2305A60F-66BF-4353-84F6-02EBFA564454}" WorkUnitID="{E010585B-9E22-4CBC-BB34-6261D83B36AB}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_takingOrder" ID="{40DCCF2C-FAE2-4A9D-ADA3-B320E22133EB}">
+					<ChildrenList>
+						<Action Name="" ID="{8C306234-F7B5-4201-99B7-5FEE0AC18186}" ShortID="412853338">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="takingOrder" ID="{F609FB94-7B55-40CF-A412-3A04D0DDF14E}" WorkUnitID="{E010585B-9E22-4CBC-BB34-6261D83B36AB}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Bell" ID="{E6C581FC-B756-4607-ADEE-84EA6E7FAD4E}">
+					<ChildrenList>
+						<Action Name="" ID="{A30A06F7-0402-4275-8453-66032BABE889}" ShortID="951813690">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Bell" ID="{670DC8E5-6FAB-44AF-BA25-51E468CDE36E}" WorkUnitID="{E010585B-9E22-4CBC-BB34-6261D83B36AB}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_indoorWalking" ID="{A7F6F7C7-90C2-410E-A54D-045F63D7D9D5}">
+					<ChildrenList>
+						<Action Name="" ID="{289E4D3E-BE92-48E3-8CE9-7DC56B140C5F}" ShortID="951424450">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="walkingWood" ID="{BA0E8129-0AB0-45B4-86B6-6F831325B422}" WorkUnitID="{E010585B-9E22-4CBC-BB34-6261D83B36AB}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_background" ID="{AB72F828-8944-4C4B-BC33-CE2D02CBC41D}">
+					<ChildrenList>
+						<Action Name="" ID="{0C3AD37E-C59C-4158-97D4-E145B3302809}" ShortID="1001710977">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="background" ID="{471CE26D-384B-4653-A2D6-F2BB5799292F}" WorkUnitID="{E010585B-9E22-4CBC-BB34-6261D83B36AB}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_winningMusic" ID="{17B48E5F-0FCD-4E62-9F6D-9EFF1539AA34}">
+					<ChildrenList>
+						<Action Name="" ID="{55C4CDFC-EE66-46A3-8DBB-BDD0CADDE8FD}" ShortID="117701778">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="winningMusic" ID="{CA840C9F-6354-40FF-9DEB-45D2DD41D586}" WorkUnitID="{E010585B-9E22-4CBC-BB34-6261D83B36AB}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_walkingGrass" ID="{8112C04E-9CB8-4024-955C-9A0602FBDE88}">
+					<ChildrenList>
+						<Action Name="" ID="{83193CC6-25C3-49F7-9CD8-BF890F35313B}" ShortID="980320421">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="walkingGrass" ID="{5968B94D-9566-4397-A1C8-5D4F043F106D}" WorkUnitID="{E010585B-9E22-4CBC-BB34-6261D83B36AB}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_walkingStreet" ID="{C0D0B1B6-3ECD-4E68-82E8-496E82C0BCDA}">
+					<ChildrenList>
+						<Action Name="" ID="{7D6E8DCE-72CC-450A-8032-11B9B0F26842}" ShortID="588008327">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="walkingStreet" ID="{0A9CD3D9-C3A3-4847-98A5-1B9604BAB9B7}" WorkUnitID="{E010585B-9E22-4CBC-BB34-6261D83B36AB}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_walkingWood" ID="{A01AC62A-7661-424B-A20B-50C3074AE161}">
+					<ChildrenList>
+						<Action Name="" ID="{FA4A39DC-93DB-40E2-AEF8-B5B6C2FA42C8}" ShortID="35699567">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="walkingWood" ID="{BA0E8129-0AB0-45B4-86B6-6F831325B422}" WorkUnitID="{E010585B-9E22-4CBC-BB34-6261D83B36AB}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_walking" ID="{ED59B58E-672F-4381-9CDF-94E4395A1DBF}">
+					<ChildrenList>
+						<Action Name="" ID="{38F6B88E-ACAD-42F2-915C-ABD91980A3C2}" ShortID="751067847">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="walking" ID="{7360C424-640E-4BE4-96B3-717B0253F5AB}" WorkUnitID="{E010585B-9E22-4CBC-BB34-6261D83B36AB}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

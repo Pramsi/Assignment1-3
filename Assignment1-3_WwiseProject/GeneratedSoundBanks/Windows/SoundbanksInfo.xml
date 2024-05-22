@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{15D4E224-0955-F795-9F64-BDCC6CF57A56}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{7E4BDAB0-0A09-651B-EDBF-C1EC26ABAA2F}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -25,26 +25,47 @@
 				<GameParameter Id="3677180323" Name="health"/>
 			</GameParameters>
 			<StateGroups>
-				<StateGroup Id="340271938" Name="walking">
+				<StateGroup Id="3650723969" Name="background">
 					<States>
 						<State Id="748895195" Name="None"/>
-						<State Id="4142189312" Name="street"/>
-						<State Id="4248645337" Name="grass"/>
+						<State Id="2350060149" Name="backgroundNoise"/>
+						<State Id="4067680020" Name="winningMusic"/>
 					</States>
 				</StateGroup>
 			</StateGroups>
+			<SwitchGroups>
+				<SwitchGroup Id="340271938" Name="walking">
+					<Switches>
+						<Switch Id="2058049674" Name="wood"/>
+						<Switch Id="4142189312" Name="street"/>
+						<Switch Id="4248645337" Name="grass"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="1807884002" Type="User" Language="SFX" Hash="{3B66A2B3-3366-B7C9-69AE-6FD9BE1FC368}">
+		<SoundBank Id="1807884002" Type="User" Language="SFX" Hash="{B27A8394-51C9-9CFA-3A67-61D45CFC5964}">
 			<ShortName>game_audio_schoeffer</ShortName>
 			<Path>game_audio_schoeffer.bnk</Path>
 			<Media>
+				<File Id="15543886" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>winnningMusic.wav</ShortName>
+					<CachePath>SFX/winnningMusic_10C4C929.wem</CachePath>
+				</File>
 				<File Id="26723888" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>StepRightGrass.wav</ShortName>
 					<CachePath>SFX/StepRightGrass_31AC151A.wem</CachePath>
 				</File>
+				<File Id="70300362" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>StepOnWood6.wav</ShortName>
+					<CachePath>SFX/StepOnWood6_10C4C929.wem</CachePath>
+				</File>
 				<File Id="109592295" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Jump.wav</ShortName>
 					<CachePath>SFX/Jump_10C4C929.wem</CachePath>
+				</File>
+				<File Id="142785782" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>StepOnWood4.wav</ShortName>
+					<CachePath>SFX/StepOnWood4_10C4C929.wem</CachePath>
 				</File>
 				<File Id="164863198" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Crickets.wav</ShortName>
@@ -78,6 +99,18 @@
 					<ShortName>Damage.wav</ShortName>
 					<CachePath>SFX/Damage_10C4C929.wem</CachePath>
 				</File>
+				<File Id="522474302" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>StepOnWood2.wav</ShortName>
+					<CachePath>SFX/StepOnWood2_10C4C929.wem</CachePath>
+				</File>
+				<File Id="561158872" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>StepOnWood5.wav</ShortName>
+					<CachePath>SFX/StepOnWood5_10C4C929.wem</CachePath>
+				</File>
+				<File Id="617368685" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>StepOnWood3.wav</ShortName>
+					<CachePath>SFX/StepOnWood3_10C4C929.wem</CachePath>
+				</File>
 				<File Id="619380089" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Crickets.wav</ShortName>
 					<CachePath>SFX/Crickets_50A1E827.wem</CachePath>
@@ -85,6 +118,10 @@
 				<File Id="733136199" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Playground.wav</ShortName>
 					<CachePath>SFX/Playground_7E2BC24F.wem</CachePath>
+				</File>
+				<File Id="774176505" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>StepOnWood1.wav</ShortName>
+					<CachePath>SFX/StepOnWood1_10C4C929.wem</CachePath>
 				</File>
 				<File Id="788579365" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>collectCoin.wav</ShortName>
@@ -101,6 +138,10 @@
 				<File Id="882171577" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Boing.wav</ShortName>
 					<CachePath>SFX/Boing_10C4C929.wem</CachePath>
+				</File>
+				<File Id="888997961" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>StepOnWood7.wav</ShortName>
+					<CachePath>SFX/StepOnWood7_10C4C929.wem</CachePath>
 				</File>
 				<File Id="992041622" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>BirdsChirping.wav</ShortName>
@@ -123,6 +164,22 @@
 				</Custom>
 			</Plugins>
 			<Events>
+				<Event Id="3196207338" Name="Play_background" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="15543886"/>
+						<MediaRef Id="164863198"/>
+						<MediaRef Id="415872005"/>
+						<MediaRef Id="619380089"/>
+						<MediaRef Id="992041622"/>
+						<MediaRef Id="1031638431"/>
+					</MediaRefs>
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="62520426"/>
+							<PluginRef Id="607753830"/>
+						</Custom>
+					</PluginRefs>
+				</Event>
 				<Event Id="693128018" Name="Play_BarkingDog" DurationType="OneShot" DurationMin="6.4914966" DurationMax="6.4914966">
 					<MediaRefs>
 						<MediaRef Id="392022390"/>
@@ -197,9 +254,48 @@
 					</MediaRefs>
 				</Event>
 				<Event Id="1733885923" Name="Play_walking" DurationType="Infinite">
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="340271938" Id="4248645337"/>
+							<MediaRefs>
+								<MediaRef Id="26723888"/>
+								<MediaRef Id="189708257"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="340271938" Id="4142189312" Default="true"/>
+							<MediaRefs>
+								<MediaRef Id="439914260"/>
+								<MediaRef Id="816120673"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="1038869313"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="340271938" Id="2058049674"/>
+							<MediaRefs>
+								<MediaRef Id="70300362"/>
+								<MediaRef Id="142785782"/>
+								<MediaRef Id="522474302"/>
+								<MediaRef Id="561158872"/>
+								<MediaRef Id="617368685"/>
+								<MediaRef Id="774176505"/>
+								<MediaRef Id="888997961"/>
+							</MediaRefs>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="1338644939" Name="Play_walkingGrass" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="26723888"/>
 						<MediaRef Id="189708257"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3403293142" Name="Play_walkingStreet" DurationType="Infinite">
+					<MediaRefs>
 						<MediaRef Id="439914260"/>
 						<MediaRef Id="816120673"/>
 					</MediaRefs>
@@ -209,11 +305,76 @@
 						</Custom>
 					</PluginRefs>
 				</Event>
+				<Event Id="4029360244" Name="Play_walkingWood" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="70300362"/>
+						<MediaRef Id="142785782"/>
+						<MediaRef Id="522474302"/>
+						<MediaRef Id="561158872"/>
+						<MediaRef Id="617368685"/>
+						<MediaRef Id="774176505"/>
+						<MediaRef Id="888997961"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3756431007" Name="Play_winningMusic" DurationType="OneShot" DurationMin="15.271996" DurationMax="15.271996">
+					<MediaRefs>
+						<MediaRef Id="15543886"/>
+					</MediaRefs>
+				</Event>
 			</Events>
 			<GameParameters>
 				<GameParameter Id="3677180323" Name="health"/>
 			</GameParameters>
+			<SwitchGroups>
+				<SwitchGroup Id="340271938" Name="walking">
+					<Switches>
+						<Switch Id="2058049674" Name="wood"/>
+						<Switch Id="4142189312" Name="street"/>
+						<Switch Id="4248645337" Name="grass"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
+		</SoundBank>
+		<SoundBank Id="3254967171" Type="User" Language="SFX" Hash="{9C287B2F-2507-D7C0-BE9F-449C5C9FC61A}">
+			<ShortName>indoor_sounds</ShortName>
+			<Path>indoor_sounds.bnk</Path>
+			<Media>
+				<File Id="278201078" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Hello.wav</ShortName>
+					<CachePath>SFX/Hello_10C4C929.wem</CachePath>
+				</File>
+				<File Id="543620922" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>RestaurantAmbience.wav</ShortName>
+					<CachePath>SFX/RestaurantAmbience_10C4C929.wem</CachePath>
+				</File>
+				<File Id="592439996" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Bell.wav</ShortName>
+					<CachePath>SFX/Bell_10C4C929.wem</CachePath>
+				</File>
+				<File Id="1068521209" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>TakingOrder.wav</ShortName>
+					<CachePath>SFX/TakingOrder_10C4C929.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="1945722105" Name="Play_Bell" DurationType="OneShot" DurationMin="2.5" DurationMax="2.5">
+					<MediaRefs>
+						<MediaRef Id="592439996"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2171456575" Name="Play_RestaurantAmbience" DurationType="OneShot" DurationMin="28.409002" DurationMax="28.409002">
+					<MediaRefs>
+						<MediaRef Id="543620922"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1088904858" Name="Play_takingOrder" DurationType="OneShot" DurationMin="3.1919954" DurationMax="3.1919954">
+					<MediaRefs>
+						<MediaRef Id="278201078"/>
+						<MediaRef Id="1068521209"/>
+					</MediaRefs>
+				</Event>
+			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{FF73F026-2D58-B6D2-2130-D45672EB84D7}</FileHash>
+	<FileHash>{D56BABA3-A382-229B-1A1B-1C9E73728A66}</FileHash>
 </SoundBanksInfo>

@@ -4,7 +4,8 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Playables;
-
+using AK.Wwise;
+using System;
 
 internal enum MovementType
 {
@@ -43,12 +44,19 @@ public class Movement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (_rigidbody != null)
+            return;
+
         _rigidbody = gameObject.GetComponent<Rigidbody>();
-        AkSoundEngine.PostEvent("Play_birds", gameObject);
-        AkSoundEngine.PostEvent("Play_crickets", gameObject);
-        AkSoundEngine.PostEvent("Play_streetNoise", gameObject);
-       
+
+
+        // Load the soundbank containing the "Play_background" event
+
+            // Ensure Wwise is initialized and post the event
+            AkSoundEngine.SetState("background", "backgroundNoise");
+            AkSoundEngine.PostEvent("Play_background", gameObject);
+            AkSoundEngine.SetSwitch("walking", "street", gameObject);
+
     }
 
     // Update is called once per frame
@@ -85,7 +93,7 @@ public class Movement : MonoBehaviour
     {
         Vector2 movementDirection = inputValue.Get<Vector2>();
         movementDirection3d = new Vector3(movementDirection.x, 0, movementDirection.y);
-
+Debug.Log(walkingId);  
 
         if (_isGrounded)
         {
@@ -98,6 +106,7 @@ public class Movement : MonoBehaviour
                 if (walkingId == -1)
                 {
                     walkingId = (int)AkSoundEngine.PostEvent("Play_walking", gameObject);
+                     
                 }
             }
 
@@ -150,12 +159,17 @@ public class Movement : MonoBehaviour
 
         if(other.gameObject.name.Contains("Lawn"))
         {
-            AkSoundEngine.SetState("walking", "grass");
+            AkSoundEngine.SetSwitch("walking", "grass", gameObject);
 
         }
         else if (other.gameObject.name.Contains("Ground"))
         {
-            AkSoundEngine.SetState("walking", "street");
+            AkSoundEngine.SetSwitch("walking", "street", gameObject);
+
+        }
+        else if (other.gameObject.name.Contains("Wood"))
+        {
+            AkSoundEngine.SetSwitch("walking", "wood", gameObject);
 
         }
 
@@ -173,8 +187,6 @@ public class Movement : MonoBehaviour
         if (other.gameObject.tag == "Coin")
         {
             AkSoundEngine.PostEvent("Play_collectCoin", gameObject);
-            AkSoundEngine.SetRTPCValue("health", 0);
-            AkSoundEngine.PostEvent("Play_heartbeat", gameObject);
         }
 
         if (other.gameObject.tag == "Playground")

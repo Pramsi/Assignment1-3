@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using AK.Wwise;
 
 public class GameManager : MonoBehaviour
 {    
@@ -9,6 +10,7 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private int health = 5;
     [SerializeField] private int collectedCoins;
+
 
     private bool _gameWon = false;
     private int _winMessage = 0;
@@ -48,11 +50,14 @@ public class GameManager : MonoBehaviour
     {
         if(collectedCoins == 9)
         {
+            AkSoundEngine.SetState("background", "winningMusic");
             if (_winMessage < 1)
             {
-            Debug.ClearDeveloperConsole();
+                AkSoundEngine.PostEvent("Play_background", gameObject);
+
+                Debug.ClearDeveloperConsole();
             Debug.Log("You Win");
-            _gameWon = true;   
+            _gameWon = true;
             }
             
             _winMessage++;
@@ -61,8 +66,8 @@ public class GameManager : MonoBehaviour
         if (!_gameWon)
         {
         
-        Debug.Log("Collected Coins: " + collectedCoins);
-        Debug.Log("Current Health: " + health);
+        //Debug.Log("Collected Coins: " + collectedCoins);
+        //Debug.Log("Current Health: " + health);
         }
 
     }

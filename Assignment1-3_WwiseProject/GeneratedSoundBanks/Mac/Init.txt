@@ -1,10 +1,10 @@
 State Group	ID	Name			Wwise Object Path	Notes
-	340271938	walking			\Default Work Unit\walking	
+	3650723969	background			\Default Work Unit\background	
 
 State	ID	Name	State Group			Notes
-	748895195	None	walking			
-	4142189312	street	walking			
-	4248645337	grass	walking			
+	748895195	None	background			
+	2350060149	backgroundNoise	background			
+	4067680020	winningMusic	background			
 
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
