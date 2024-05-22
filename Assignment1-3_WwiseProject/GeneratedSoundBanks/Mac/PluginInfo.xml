@@ -2,9 +2,10 @@
 <PluginInfo Platform="Mac" BasePlatform="Mac">
 	<PluginLibs>
 		<PluginLib LibName="Wwise Compressor" LibId="7077891" Type="Effect" DLL="AkCompressor" StaticLib="AkCompressorFX"/>
+		<PluginLib LibName="Wwise RoomVerb" LibId="7733251" Type="Effect" DLL="AkRoomVerb" StaticLib="AkRoomVerbFX"/>
 		<PluginLib LibName="Wwise Pitch Shifter" LibId="8912899" Type="Effect" DLL="AkPitchShifter" StaticLib="AkPitchShifterFX"/>
 		<PluginLib LibName="System" LibId="11403271" Type="AudioDevice"/>
 		<PluginLib LibName="No Output" LibId="11862023" Type="AudioDevice"/>
 	</PluginLibs>
-	<FileHash>{4E5085D5-E57D-8F06-2D34-E172A2C25A70}</FileHash>
+	<FileHash>{311A0C18-94C5-8A6D-5677-97D05D244369}</FileHash>
 </PluginInfo>

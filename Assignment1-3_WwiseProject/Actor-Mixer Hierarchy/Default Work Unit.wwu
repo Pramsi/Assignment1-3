@@ -886,7 +886,7 @@
 							<ObjectRef Name="street" ID="{A4F11B4B-3DEA-431F-AA57-E40BD3F74133}" WorkUnitID="{9DD4ABAF-9787-4B98-94E9-B161359797B8}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4DBC27A7-B3B6-41EA-B217-ED60E12C521B}"/>
+							<ObjectRef Name="reverbBetweenHouses" ID="{4AC24815-63A4-4D74-A91D-6075898CBCFE}" WorkUnitID="{4DBC27A7-B3B6-41EA-B217-ED60E12C521B}"/>
 						</Reference>
 						<Reference Name="SwitchGroupOrStateGroup">
 							<ObjectRef Name="walking" ID="{F66E035F-FFBC-4C97-B405-A575B3B1B66B}" WorkUnitID="{9DD4ABAF-9787-4B98-94E9-B161359797B8}"/>
@@ -1375,6 +1375,47 @@
 						</GroupingList>
 					</GroupingInfo>
 				</SwitchContainer>
+				<Sound Name="RestaurantAmbienceOutdoor" ID="{0A1A425D-D382-43C9-ADD3-9B7C1CAE3E20}" ShortID="230330990">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="2"/>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+						<Property Name="Lowpass" Type="int16">
+							<ValueList>
+								<Value>22</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-20</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2CED83F5-9D66-4DE4-9941-C5F401994CC1}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4DBC27A7-B3B6-41EA-B217-ED60E12C521B}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="RestaurantAmbience" ID="{64B017F4-A046-4AAA-B253-E33DE5B35137}">
+							<PropertyList>
+								<Property Name="LoopBegin" Type="Real64" Value="0.21662637894664"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+								<Property Name="TrimBegin" Type="Real64" Value="0.21662637894664"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>RestaurantAmbience.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="485869988"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="RestaurantAmbience" ID="{64B017F4-A046-4AAA-B253-E33DE5B35137}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

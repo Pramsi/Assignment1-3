@@ -9,16 +9,26 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{446C700D-E6AD-463E-299B-AE4835F308B3}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{A0D2FBB1-467D-1161-04E9-C7CC86E4C6F1}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
+				<Custom>
+					<Plugin Id="7850013" Name="Have_U_Ever_Been_Outside (Custom)" LibName="Wwise RoomVerb" LibId="7733251"/>
+				</Custom>
 				<AudioDevices>
 					<Plugin Id="2317455096" Name="No_Output" LibName="No Output" LibId="11862023"/>
 					<Plugin Id="3859886410" Name="System" LibName="System" LibId="11403271"/>
 				</AudioDevices>
 			</Plugins>
 			<Busses>
+				<Bus Id="452819252" Name="reverbBetweenHouses">
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="7850013"/>
+						</Custom>
+					</PluginRefs>
+				</Bus>
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
 			</Busses>
 			<GameParameters>
@@ -43,7 +53,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="1807884002" Type="User" Language="SFX" Hash="{B27A8394-51C9-9CFA-3A67-61D45CFC5964}">
+		<SoundBank Id="1807884002" Type="User" Language="SFX" Hash="{4B023BFB-E91D-A6EE-B014-D0E64B1A5265}">
 			<ShortName>game_audio_schoeffer</ShortName>
 			<Path>game_audio_schoeffer.bnk</Path>
 			<Media>
@@ -94,6 +104,10 @@
 				<File Id="452281267" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>BassMusic.wav</ShortName>
 					<CachePath>SFX/BassMusic_A5DF8AED.wem</CachePath>
+				</File>
+				<File Id="485869988" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>RestaurantAmbience.wav</ShortName>
+					<CachePath>SFX/RestaurantAmbience_25356133.wem</CachePath>
 				</File>
 				<File Id="506101012" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Damage.wav</ShortName>
@@ -158,6 +172,7 @@
 			</Media>
 			<Plugins>
 				<Custom>
+					<Plugin Id="7850013" Name="Have_U_Ever_Been_Outside (Custom)" LibName="Wwise RoomVerb" LibId="7733251"/>
 					<Plugin Id="62520426" Name="Octave_Up (Custom)" LibName="Wwise Pitch Shifter" LibId="8912899"/>
 					<Plugin Id="607753830" Name="Attack_Remover (Custom)" LibName="Wwise Compressor" LibId="7077891"/>
 					<Plugin Id="1038869313" Name="Octave_Down (Custom)" LibName="Wwise Pitch Shifter" LibId="8912899"/>
@@ -248,6 +263,11 @@
 						<MediaRef Id="733136199"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="1340983621" Name="Play_RestaurantAmbienceOutdoor" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="485869988"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="2737802779" Name="Play_streetNoise" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="1031638431"/>
@@ -288,40 +308,22 @@
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
-				<Event Id="1338644939" Name="Play_walkingGrass" DurationType="Infinite">
-					<MediaRefs>
-						<MediaRef Id="26723888"/>
-						<MediaRef Id="189708257"/>
-					</MediaRefs>
-				</Event>
-				<Event Id="3403293142" Name="Play_walkingStreet" DurationType="Infinite">
-					<MediaRefs>
-						<MediaRef Id="439914260"/>
-						<MediaRef Id="816120673"/>
-					</MediaRefs>
-					<PluginRefs>
-						<Custom>
-							<PluginRef Id="1038869313"/>
-						</Custom>
-					</PluginRefs>
-				</Event>
-				<Event Id="4029360244" Name="Play_walkingWood" DurationType="Infinite">
-					<MediaRefs>
-						<MediaRef Id="70300362"/>
-						<MediaRef Id="142785782"/>
-						<MediaRef Id="522474302"/>
-						<MediaRef Id="561158872"/>
-						<MediaRef Id="617368685"/>
-						<MediaRef Id="774176505"/>
-						<MediaRef Id="888997961"/>
-					</MediaRefs>
-				</Event>
 				<Event Id="3756431007" Name="Play_winningMusic" DurationType="OneShot" DurationMin="15.271996" DurationMax="15.271996">
 					<MediaRefs>
 						<MediaRef Id="15543886"/>
 					</MediaRefs>
 				</Event>
 			</Events>
+			<Busses>
+				<Bus Id="452819252" Name="reverbBetweenHouses">
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="7850013"/>
+						</Custom>
+					</PluginRefs>
+				</Bus>
+				<Bus Id="3803692087" Name="Master Audio Bus"/>
+			</Busses>
 			<GameParameters>
 				<GameParameter Id="3677180323" Name="health"/>
 			</GameParameters>
@@ -335,7 +337,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3254967171" Type="User" Language="SFX" Hash="{89C655E2-505D-E187-0A91-FC4D0F21FCFB}">
+		<SoundBank Id="3254967171" Type="User" Language="SFX" Hash="{3C6E38BF-94B4-BBAF-DA32-DF334538A5C9}">
 			<ShortName>indoor_sounds</ShortName>
 			<Path>indoor_sounds.bnk</Path>
 			<Media>
@@ -487,5 +489,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{81787846-D8A2-2389-6F05-C86712BFAAE2}</FileHash>
+	<FileHash>{2756B044-136A-EF86-B774-733FCFF7666D}</FileHash>
 </SoundBanksInfo>

@@ -28,12 +28,10 @@ namespace AK
         static const AkUniqueID PLAY_LANDING = 2323405115U;
         static const AkUniqueID PLAY_PLAYGROUND = 2393638833U;
         static const AkUniqueID PLAY_RESTAURANTAMBIENCE = 2171456575U;
+        static const AkUniqueID PLAY_RESTAURANTAMBIENCEOUTDOOR = 1340983621U;
         static const AkUniqueID PLAY_STREETNOISE = 2737802779U;
         static const AkUniqueID PLAY_TAKINGORDER = 1088904858U;
         static const AkUniqueID PLAY_WALKING = 1733885923U;
-        static const AkUniqueID PLAY_WALKINGGRASS = 1338644939U;
-        static const AkUniqueID PLAY_WALKINGSTREET = 3403293142U;
-        static const AkUniqueID PLAY_WALKINGWOOD = 4029360244U;
         static const AkUniqueID PLAY_WINNINGMUSIC = 3756431007U;
     } // namespace EVENTS
 
@@ -84,6 +82,7 @@ namespace AK
     namespace BUSSES
     {
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
+        static const AkUniqueID REVERBBETWEENHOUSES = 452819252U;
     } // namespace BUSSES
 
     namespace AUDIO_DEVICES

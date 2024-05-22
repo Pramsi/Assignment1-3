@@ -223,45 +223,23 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Play_walkingGrass" ID="{8112C04E-9CB8-4024-955C-9A0602FBDE88}">
-					<ChildrenList>
-						<Action Name="" ID="{83193CC6-25C3-49F7-9CD8-BF890F35313B}" ShortID="980320421">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="walkingGrass" ID="{5968B94D-9566-4397-A1C8-5D4F043F106D}" WorkUnitID="{E010585B-9E22-4CBC-BB34-6261D83B36AB}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Play_walkingStreet" ID="{C0D0B1B6-3ECD-4E68-82E8-496E82C0BCDA}">
-					<ChildrenList>
-						<Action Name="" ID="{7D6E8DCE-72CC-450A-8032-11B9B0F26842}" ShortID="588008327">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="walkingStreet" ID="{0A9CD3D9-C3A3-4847-98A5-1B9604BAB9B7}" WorkUnitID="{E010585B-9E22-4CBC-BB34-6261D83B36AB}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Play_walkingWood" ID="{A01AC62A-7661-424B-A20B-50C3074AE161}">
-					<ChildrenList>
-						<Action Name="" ID="{FA4A39DC-93DB-40E2-AEF8-B5B6C2FA42C8}" ShortID="35699567">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="walkingWood" ID="{BA0E8129-0AB0-45B4-86B6-6F831325B422}" WorkUnitID="{E010585B-9E22-4CBC-BB34-6261D83B36AB}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
 				<Event Name="Play_walking" ID="{ED59B58E-672F-4381-9CDF-94E4395A1DBF}">
 					<ChildrenList>
 						<Action Name="" ID="{38F6B88E-ACAD-42F2-915C-ABD91980A3C2}" ShortID="751067847">
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="walking" ID="{7360C424-640E-4BE4-96B3-717B0253F5AB}" WorkUnitID="{E010585B-9E22-4CBC-BB34-6261D83B36AB}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_RestaurantAmbienceOutdoor" ID="{F4C3EACD-AD88-484E-827F-8E4ADF99124D}">
+					<ChildrenList>
+						<Action Name="" ID="{3863EB93-90A5-454E-B4B8-FFB6F84275E0}" ShortID="606257861">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RestaurantAmbienceOutdoor" ID="{0A1A425D-D382-43C9-ADD3-9B7C1CAE3E20}" WorkUnitID="{E010585B-9E22-4CBC-BB34-6261D83B36AB}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

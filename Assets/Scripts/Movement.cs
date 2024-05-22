@@ -42,6 +42,7 @@ public class Movement : MonoBehaviour
     private uint loudHouseId;
     private uint backgroundId;
     private uint restaurantAmbienceId;
+    private uint outdoorRestaurantAmbienceId;
 
     private int walkingId = -1;
     private int movementKeysPressed = 0;
@@ -64,6 +65,7 @@ public class Movement : MonoBehaviour
         }
         else if (SceneManager.GetActiveScene().name == "Indoor")
         {
+            AkSoundEngine.PostEvent("Play_Bell", gameObject);
             restaurantAmbienceId = AkSoundEngine.PostEvent("Play_RestaurantAmbience", gameObject);
         }
            
@@ -196,6 +198,12 @@ Debug.Log(walkingId);
             dogHouseId = AkSoundEngine.PostEvent("Play_BarkingDog", gameObject);
         }
 
+        if (other.gameObject.tag == "RestaurantAmbientTrigger")
+        {
+            
+            outdoorRestaurantAmbienceId = AkSoundEngine.PostEvent("Play_RestaurantAmbienceOutdoor", gameObject);
+        }
+
         if (other.gameObject.tag == "Coin")
         {
             AkSoundEngine.PostEvent("Play_collectCoin", gameObject);
@@ -218,6 +226,10 @@ Debug.Log(walkingId);
         
         if(other.gameObject.tag == "Jump")
         {
+            _isLanding = true;
+            AkSoundEngine.StopPlayingID((uint)walkingId);
+            walkingId = -1;
+            _isGrounded = false;
             _rigidbody.AddForce(new Vector3(0, _jumpPower*2, 0), ForceMode.Impulse);
 
             AkSoundEngine.PostEvent("Play_boing", gameObject);
@@ -227,13 +239,16 @@ Debug.Log(walkingId);
         {
             AkSoundEngine.StopPlayingID((uint)walkingId);
             AkSoundEngine.StopPlayingID(backgroundId);
+            
         }
 
         if (other.gameObject.name.Contains("ExitShopTrigger"))
         {
             AkSoundEngine.StopPlayingID((uint)walkingId);
             AkSoundEngine.StopPlayingID(restaurantAmbienceId);
+
         }
+
         if (other.gameObject.tag == "OrderTrigger")
         {
             loudHouseId = AkSoundEngine.PostEvent("Play_takingOrder", gameObject);
@@ -256,7 +271,12 @@ Debug.Log(walkingId);
 
         if (other.gameObject.tag == "LoudHouse")
         {
-            AkSoundEngine.StopPlayingID(loudHouseId, 2000);
+            AkSoundEngine.StopPlayingID(loudHouseId, 1000);
+        }
+
+        if (other.gameObject.tag == "RestaurantAmbientTrigger")
+        {
+            AkSoundEngine.StopPlayingID(outdoorRestaurantAmbienceId, 1000);
         }
     }
 }

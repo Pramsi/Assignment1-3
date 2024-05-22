@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: a727bc4db6b3ea41b217ed60e12c521b
     GuidInternal: 
-    m_lastTime: -8584856803308259867
+    m_lastTime: -8584852283541323864
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -54,6 +54,20 @@ MonoBehaviour:
         ObjectType: 2
         guid: d8a41415a61d2a41a17e75ca0c2149f3
       Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus
+    - name: reverbBetweenHouses
+      guid: 1548c24aa463744da91d6075898cbcfe
+      id: 452819252
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a727bc4db6b3ea41b217ed60e12c521b
+      - ElementName: reverbBetweenHouses
+        ObjectType: 2
+        guid: 1548c24aa463744da91d6075898cbcfe
+      Path: Master-Mixer Hierarchy\Default Work Unit\reverbBetweenHouses
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     PathAndIcons:
@@ -66,7 +80,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 41415fa4a44dda4583e727475494afd3
     GuidInternal: 
-    m_lastTime: -8584852371097231530
+    m_lastTime: -8584852280933467649
     List:
     - name: game_audio_schoeffer
       guid: 9404a862e130434d8406268103ef5260
@@ -108,7 +122,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 4d54540814b06e4eaf7f910c0b4c3577
     GuidInternal: 
-    m_lastTime: -8584852407719774922
+    m_lastTime: -8584852280933533668
     List:
     - name: Play_background
       guid: 28f872ab44894b4cbc33ce2d02cbc41d
@@ -399,6 +413,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 28.409002
       minDuration: 28.409002
+    - name: Play_RestaurantAmbienceOutdoor
+      guid: cdeac3f488ad4e48827f8e4adf99124d
+      id: 1340983621
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 4d54540814b06e4eaf7f910c0b4c3577
+      - ElementName: Play_RestaurantAmbienceOutdoor
+        ObjectType: 3
+        guid: cdeac3f488ad4e48827f8e4adf99124d
+      Path: Events\Default Work Unit\Play_RestaurantAmbienceOutdoor
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Play_streetNoise
       guid: 55727d411fe5a044a92cf7e617564e73
       id: 2737802779
@@ -447,57 +478,6 @@ MonoBehaviour:
         ObjectType: 3
         guid: 8eb559ed2f6781439cdf94e4395a1dbf
       Path: Events\Default Work Unit\Play_walking
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
-    - name: Play_walkingGrass
-      guid: 4ec01281b89c2440955c9a0602fbde88
-      id: 1338644939
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: 4d54540814b06e4eaf7f910c0b4c3577
-      - ElementName: Play_walkingGrass
-        ObjectType: 3
-        guid: 4ec01281b89c2440955c9a0602fbde88
-      Path: Events\Default Work Unit\Play_walkingGrass
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
-    - name: Play_walkingStreet
-      guid: b6b1d0c0cd3e684e82e8496e82c0bcda
-      id: 3403293142
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: 4d54540814b06e4eaf7f910c0b4c3577
-      - ElementName: Play_walkingStreet
-        ObjectType: 3
-        guid: b6b1d0c0cd3e684e82e8496e82c0bcda
-      Path: Events\Default Work Unit\Play_walkingStreet
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
-    - name: Play_walkingWood
-      guid: 2ac61aa061764b42a20b50c3074ae161
-      id: 4029360244
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: 4d54540814b06e4eaf7f910c0b4c3577
-      - ElementName: Play_walkingWood
-        ObjectType: 3
-        guid: 2ac61aa061764b42a20b50c3074ae161
-      Path: Events\Default Work Unit\Play_walkingWood
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -721,7 +701,7 @@ MonoBehaviour:
     m_lastTime: -8584856803293151775
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 06000000070000000c0000000d000000150000001600000017000000190000001a0000001b0000001c0000001d000000220000002300000024000000
+  ExpandedWaapiItemIds: 020000000300000006000000070000000c0000000d000000150000001600000017000000190000001a0000001b0000001c0000001d0000002200000023000000240000005400000055000000a1000000a2000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
