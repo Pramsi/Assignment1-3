@@ -30,8 +30,11 @@
 				</SoundBank>
 				<SoundBank Name="indoor_sounds" ID="{3E2F1B8F-6AB7-4F0C-8E2D-63009D51E666}">
 					<ObjectInclusionList>
+						<ObjectRef Name="Play_jump" ID="{B528D5C7-937D-4132-8318-93C264C20C0F}" WorkUnitID="{0854544D-B014-4E6E-AF7F-910C0B4C3577}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_walking" ID="{ED59B58E-672F-4381-9CDF-94E4395A1DBF}" WorkUnitID="{0854544D-B014-4E6E-AF7F-910C0B4C3577}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Bell" ID="{E6C581FC-B756-4607-ADEE-84EA6E7FAD4E}" WorkUnitID="{0854544D-B014-4E6E-AF7F-910C0B4C3577}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_takingOrder" ID="{40DCCF2C-FAE2-4A9D-ADA3-B320E22133EB}" WorkUnitID="{0854544D-B014-4E6E-AF7F-910C0B4C3577}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_landing" ID="{86C49D9E-5027-4DE3-A9E0-7F5EA9E571C8}" WorkUnitID="{0854544D-B014-4E6E-AF7F-910C0B4C3577}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_RestaurantAmbience" ID="{EC877E45-D798-4E43-BC46-3853904FE3CD}" WorkUnitID="{0854544D-B014-4E6E-AF7F-910C0B4C3577}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>

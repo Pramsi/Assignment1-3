@@ -1032,6 +1032,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _sceneName: Indoor
+  secondSoundbankName: indoor_sounds
 --- !u!1001 &914552366
 PrefabInstance:
   m_ObjectHideFlags: 0

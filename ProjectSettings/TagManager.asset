@@ -12,6 +12,8 @@ TagManager:
   - House
   - LoudHouse
   - Jump
+  - Fluid
+  - OrderTrigger
   layers:
   - Default
   - TransparentFX

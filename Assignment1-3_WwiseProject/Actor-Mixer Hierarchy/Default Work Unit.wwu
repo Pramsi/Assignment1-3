@@ -433,6 +433,13 @@
 					</ActiveSourceList>
 				</Sound>
 				<Sound Name="RestaurantAmbience" ID="{2305A60F-66BF-4353-84F6-02EBFA564454}" ShortID="514232235">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-13</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2CED83F5-9D66-4DE4-9941-C5F401994CC1}"/>

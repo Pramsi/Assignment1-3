@@ -1,11 +1,38 @@
 Event	ID	Name			Wwise Object Path	Notes
 	1088904858	Play_takingOrder			\Default Work Unit\Play_takingOrder	
+	1733885923	Play_walking			\Default Work Unit\Play_walking	
 	1945722105	Play_Bell			\Default Work Unit\Play_Bell	
 	2171456575	Play_RestaurantAmbience			\Default Work Unit\Play_RestaurantAmbience	
+	2323405115	Play_landing			\Default Work Unit\Play_landing	
+	3689126666	Play_jump			\Default Work Unit\Play_jump	
+
+Switch Group	ID	Name			Wwise Object Path	Notes
+	340271938	walking			\Default Work Unit\walking	
+
+Switch	ID	Name	Switch Group			Notes
+	2058049674	wood	walking			
+	4142189312	street	walking			
+	4248645337	grass	walking			
+
+Effect plug-ins	ID	Name	Type				Notes
+	1038869313	Octave_Down (Custom)	Wwise Pitch Shifter			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	26723888	StepRightGrass	C:\Users\Manuel\Desktop\FinalProjectGameAudio\Assignment1-3\Assignment1-3_WwiseProject\.cache\Mac\SFX\StepRightGrass_31AC151A.wem		\Actor-Mixer Hierarchy\Default Work Unit\walking\walkingGrass\StepRightGrass		79476
+	70300362	StepOnWood6	C:\Users\Manuel\Desktop\FinalProjectGameAudio\Assignment1-3\Assignment1-3_WwiseProject\.cache\Mac\SFX\StepOnWood6_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\walking\walkingWood\StepOnWood6		88296
+	109592295	Jump	C:\Users\Manuel\Desktop\FinalProjectGameAudio\Assignment1-3\Assignment1-3_WwiseProject\.cache\Mac\SFX\Jump_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\jump\Jump		101880
+	142785782	StepOnWood4	C:\Users\Manuel\Desktop\FinalProjectGameAudio\Assignment1-3\Assignment1-3_WwiseProject\.cache\Mac\SFX\StepOnWood4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\walking\walkingWood\StepOnWood4		88296
+	189708257	StepLeftGrass	C:\Users\Manuel\Desktop\FinalProjectGameAudio\Assignment1-3\Assignment1-3_WwiseProject\.cache\Mac\SFX\StepLeftGrass_31AC151A.wem		\Actor-Mixer Hierarchy\Default Work Unit\walking\walkingGrass\StepLeftGrass		79476
 	278201078	Hello	C:\Users\Manuel\Desktop\FinalProjectGameAudio\Assignment1-3\Assignment1-3_WwiseProject\.cache\Mac\SFX\Hello_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\takingOrder\Hello		176496
+	439914260	FootStepsLeft	C:\Users\Manuel\Desktop\FinalProjectGameAudio\Assignment1-3\Assignment1-3_WwiseProject\.cache\Mac\SFX\FootStepsLeft_35D1DADB.wem		\Actor-Mixer Hierarchy\Default Work Unit\walking\walkingStreet\FootStepsLeft		79476
+	522474302	StepOnWood2	C:\Users\Manuel\Desktop\FinalProjectGameAudio\Assignment1-3\Assignment1-3_WwiseProject\.cache\Mac\SFX\StepOnWood2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\walking\walkingWood\StepOnWood2		88296
 	543620922	RestaurantAmbience	C:\Users\Manuel\Desktop\FinalProjectGameAudio\Assignment1-3\Assignment1-3_WwiseProject\.cache\Mac\SFX\RestaurantAmbience_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\RestaurantAmbience		5011444
+	561158872	StepOnWood5	C:\Users\Manuel\Desktop\FinalProjectGameAudio\Assignment1-3\Assignment1-3_WwiseProject\.cache\Mac\SFX\StepOnWood5_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\walking\walkingWood\StepOnWood5		88296
 	592439996	Bell	C:\Users\Manuel\Desktop\FinalProjectGameAudio\Assignment1-3\Assignment1-3_WwiseProject\.cache\Mac\SFX\Bell_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Bell		441096
+	617368685	StepOnWood3	C:\Users\Manuel\Desktop\FinalProjectGameAudio\Assignment1-3\Assignment1-3_WwiseProject\.cache\Mac\SFX\StepOnWood3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\walking\walkingWood\StepOnWood3		88296
+	774176505	StepOnWood1	C:\Users\Manuel\Desktop\FinalProjectGameAudio\Assignment1-3\Assignment1-3_WwiseProject\.cache\Mac\SFX\StepOnWood1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\walking\walkingWood\StepOnWood1		88296
+	795206288	Landing	C:\Users\Manuel\Desktop\FinalProjectGameAudio\Assignment1-3\Assignment1-3_WwiseProject\.cache\Mac\SFX\Landing_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\landing\Landing		52664
+	816120673	FootStepsRight	C:\Users\Manuel\Desktop\FinalProjectGameAudio\Assignment1-3\Assignment1-3_WwiseProject\.cache\Mac\SFX\FootStepsRight_35D1DADB.wem		\Actor-Mixer Hierarchy\Default Work Unit\walking\walkingStreet\FootStepsRight		79476
+	888997961	StepOnWood7	C:\Users\Manuel\Desktop\FinalProjectGameAudio\Assignment1-3\Assignment1-3_WwiseProject\.cache\Mac\SFX\StepOnWood7_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\walking\walkingWood\StepOnWood7		88296
 	1068521209	TakingOrder	C:\Users\Manuel\Desktop\FinalProjectGameAudio\Assignment1-3\Assignment1-3_WwiseProject\.cache\Mac\SFX\TakingOrder_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\takingOrder\TakingOrder		386764
 

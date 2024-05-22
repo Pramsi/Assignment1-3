@@ -6,6 +6,9 @@ using UnityEngine.InputSystem;
 using UnityEngine.Playables;
 using AK.Wwise;
 using System;
+using UnityEngine.UIElements;
+using UnityEditor.SearchService;
+using UnityEngine.SceneManagement;
 
 internal enum MovementType
 {
@@ -37,31 +40,40 @@ public class Movement : MonoBehaviour
     private uint playgroundId;
     private uint dogHouseId;
     private uint loudHouseId;
+    private uint backgroundId;
+    private uint restaurantAmbienceId;
 
     private int walkingId = -1;
     private int movementKeysPressed = 0;
 
+
+
     // Start is called before the first frame update
     void Start()
     {
+        
         if (_rigidbody != null)
             return;
 
         _rigidbody = gameObject.GetComponent<Rigidbody>();
 
-
-        // Load the soundbank containing the "Play_background" event
-
-            // Ensure Wwise is initialized and post the event
+   if( SceneManager.GetActiveScene().name == "FirstScene") {
             AkSoundEngine.SetState("background", "backgroundNoise");
-            AkSoundEngine.PostEvent("Play_background", gameObject);
+            backgroundId = AkSoundEngine.PostEvent("Play_background", gameObject);
             AkSoundEngine.SetSwitch("walking", "street", gameObject);
+        }
+        else if (SceneManager.GetActiveScene().name == "Indoor")
+        {
+            restaurantAmbienceId = AkSoundEngine.PostEvent("Play_RestaurantAmbience", gameObject);
+        }
+           
 
     }
 
     // Update is called once per frame
     void Update()
     {
+
         PerformMovement();
         /* if (Input.GetKey(KeyCode.W))
              gameObject.transform.position += new Vector3(0, 0, -1f) * _velocity;*/
@@ -210,6 +222,23 @@ Debug.Log(walkingId);
 
             AkSoundEngine.PostEvent("Play_boing", gameObject);
         }
+
+        if (other.gameObject.name.Contains("EnterShopTrigger"))
+        {
+            AkSoundEngine.StopPlayingID((uint)walkingId);
+            AkSoundEngine.StopPlayingID(backgroundId);
+        }
+
+        if (other.gameObject.name.Contains("ExitShopTrigger"))
+        {
+            AkSoundEngine.StopPlayingID((uint)walkingId);
+            AkSoundEngine.StopPlayingID(restaurantAmbienceId);
+        }
+        if (other.gameObject.tag == "OrderTrigger")
+        {
+            loudHouseId = AkSoundEngine.PostEvent("Play_takingOrder", gameObject);
+        }
+
 
     }
 
