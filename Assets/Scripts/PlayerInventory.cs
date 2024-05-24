@@ -11,27 +11,33 @@ public class PlayerInventory : MonoBehaviour
     public PlayerStatistics localPlayerData = new PlayerStatistics();
 
 
-
-
-    public int collectedCoins { get; private set; }
-    public int health { get; private set; } = 5;
-
-
     void Awake()
     {
         if (Instance == null)
+        {
             Instance = this;
-
-        if (Instance != this)
+            DontDestroyOnLoad(gameObject);
+        }
+        else if (Instance != this)
+        {
             Destroy(gameObject);
-
-        GameManager.Instance.Player = gameObject;
+            return; // Early return to avoid running Start on the destroyed instance
+        }
     }
-
-    //At start, load data from GlobalControl.
     void Start()
     {
-        localPlayerData = GameManager.Instance.savedPlayerData;
+        if (GameManager.Instance != null)
+        {
+            localPlayerData = GameManager.Instance.savedPlayerData;
+        }
+    }
+
+    public void SavePlayerData()
+    {
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.savedPlayerData = localPlayerData;
+        }
     }
 
 }

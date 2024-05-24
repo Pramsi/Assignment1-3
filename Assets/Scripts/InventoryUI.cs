@@ -8,12 +8,20 @@ public class InventoryUI : MonoBehaviour
 
     private void Start()
     {
-
+        UpdateUI();
     }
 
     private void Update()
     {
-        CoinText.text = PlayerInventory.Instance.localPlayerData.coins.ToString();
-        HealthText.text = PlayerInventory.Instance.localPlayerData.health.ToString();
+        UpdateUI();
+    }
+
+    private void UpdateUI()
+    {
+        if (PlayerInventory.Instance != null)
+        {
+            CoinText.text = PlayerInventory.Instance.localPlayerData.coins.ToString();
+            HealthText.text = PlayerInventory.Instance.localPlayerData.health.ToString();
+        }
     }
 }

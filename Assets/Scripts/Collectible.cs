@@ -11,8 +11,8 @@ public class Collectible : MonoBehaviour
         if (other.gameObject.name.Contains("Player"))
         {
             PlayerInventory.Instance.localPlayerData.coins += coinAmount;
-                
-                gameObject.SetActive(false);
+            PlayerInventory.Instance.SavePlayerData();
+            gameObject.SetActive(false);
             
         }
     }

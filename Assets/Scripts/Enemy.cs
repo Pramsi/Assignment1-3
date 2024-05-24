@@ -8,6 +8,8 @@ public class Enemy : MonoBehaviour
         if (other.gameObject.name.Contains("Player"))
         {
             PlayerInventory.Instance.localPlayerData.health -= healthDecrease;
+            PlayerInventory.Instance.SavePlayerData();
+
         }
     }
 }
