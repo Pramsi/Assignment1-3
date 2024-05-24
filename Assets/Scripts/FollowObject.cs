@@ -15,6 +15,11 @@ public class FollowObject : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (objectToFollow == null)
+        {
+            Debug.LogError("objectToFollow is not assigned in the FollowObject script.");
+            return;
+        }
         otherObjectTransform = objectToFollow.GetComponent<Transform>();
         ownObjectTransform = gameObject.GetComponent<Transform>();
         offsetOfFollowObjectAndOwnObject = ownObjectTransform.position - otherObjectTransform.position;

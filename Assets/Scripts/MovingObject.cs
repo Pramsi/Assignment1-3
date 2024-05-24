@@ -18,6 +18,7 @@ public class MovingObject : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         startingPoint = gameObject.transform.position;
         destinationPoint = startingPoint + distanceToMove;
     }

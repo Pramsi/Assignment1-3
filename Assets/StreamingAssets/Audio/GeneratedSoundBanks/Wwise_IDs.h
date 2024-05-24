@@ -14,25 +14,21 @@ namespace AK
     namespace EVENTS
     {
         static const AkUniqueID PLAY_BACKGROUND = 3196207338U;
-        static const AkUniqueID PLAY_BARKINGDOG = 693128018U;
         static const AkUniqueID PLAY_BASSMUSIC = 3933864212U;
         static const AkUniqueID PLAY_BELL = 1945722105U;
-        static const AkUniqueID PLAY_BIRDS = 3025897706U;
         static const AkUniqueID PLAY_BOING = 3698997709U;
         static const AkUniqueID PLAY_COLLECTCOIN = 2228638855U;
-        static const AkUniqueID PLAY_CRICKETS = 2626596706U;
         static const AkUniqueID PLAY_DAMAGE = 784302017U;
+        static const AkUniqueID PLAY_DOGBARK = 1754141786U;
         static const AkUniqueID PLAY_DOORBELL = 3778958205U;
-        static const AkUniqueID PLAY_HEARTBEAT = 3765695918U;
+        static const AkUniqueID PLAY_HEALTHREPRESENTATION = 939831523U;
         static const AkUniqueID PLAY_JUMP = 3689126666U;
         static const AkUniqueID PLAY_LANDING = 2323405115U;
         static const AkUniqueID PLAY_PLAYGROUND = 2393638833U;
         static const AkUniqueID PLAY_RESTAURANTAMBIENCE = 2171456575U;
         static const AkUniqueID PLAY_RESTAURANTAMBIENCEOUTDOOR = 1340983621U;
-        static const AkUniqueID PLAY_STREETNOISE = 2737802779U;
         static const AkUniqueID PLAY_TAKINGORDER = 1088904858U;
         static const AkUniqueID PLAY_WALKING = 1733885923U;
-        static const AkUniqueID PLAY_WINNINGMUSIC = 3756431007U;
     } // namespace EVENTS
 
     namespace STATES
@@ -81,9 +77,16 @@ namespace AK
 
     namespace BUSSES
     {
+        static const AkUniqueID INDOORREVERBBUS = 45429314U;
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
         static const AkUniqueID REVERBBETWEENHOUSES = 452819252U;
     } // namespace BUSSES
+
+    namespace AUX_BUSSES
+    {
+        static const AkUniqueID BETWEENHOUSESREVERB = 3319985400U;
+        static const AkUniqueID INDOORREVERB = 2014821848U;
+    } // namespace AUX_BUSSES
 
     namespace AUDIO_DEVICES
     {

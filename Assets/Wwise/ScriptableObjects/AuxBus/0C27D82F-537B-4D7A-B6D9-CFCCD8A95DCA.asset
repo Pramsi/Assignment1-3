@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3b511c9c7db9dd49a6028dbf3f64ae8, type: 3}
+  m_Name: 0C27D82F-537B-4D7A-B6D9-CFCCD8A95DCA
+  m_EditorClassIdentifier: 
+  objectName: BetweenHousesReverb
+  id: 3319985400
+  guid: 0C27D82F-537B-4D7A-B6D9-CFCCD8A95DCA

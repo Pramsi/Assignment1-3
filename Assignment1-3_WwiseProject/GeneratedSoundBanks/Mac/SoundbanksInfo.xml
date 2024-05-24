@@ -9,19 +9,30 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{A0D2FBB1-467D-1161-04E9-C7CC86E4C6F1}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{81D3873F-56EA-8574-8FA3-95A28E99814C}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
 				<Custom>
 					<Plugin Id="7850013" Name="Have_U_Ever_Been_Outside (Custom)" LibName="Wwise RoomVerb" LibId="7733251"/>
 				</Custom>
+				<ShareSets>
+					<Plugin Id="1144018367" Name="Plate_Large" LibName="Wwise RoomVerb" LibId="7733251"/>
+					<Plugin Id="2995775460" Name="Room_Small" LibName="Wwise RoomVerb" LibId="7733251"/>
+				</ShareSets>
 				<AudioDevices>
 					<Plugin Id="2317455096" Name="No_Output" LibName="No Output" LibId="11862023"/>
 					<Plugin Id="3859886410" Name="System" LibName="System" LibId="11403271"/>
 				</AudioDevices>
 			</Plugins>
 			<Busses>
+				<Bus Id="45429314" Name="IndoorReverbBus">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
+				</Bus>
 				<Bus Id="452819252" Name="reverbBetweenHouses">
 					<PluginRefs>
 						<Custom>
@@ -31,6 +42,22 @@
 				</Bus>
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
 			</Busses>
+			<AuxBusses>
+				<AuxBus Id="2014821848" Name="IndoorReverb">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
+				</AuxBus>
+				<AuxBus Id="3319985400" Name="BetweenHousesReverb">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="1144018367"/>
+						</ShareSets>
+					</PluginRefs>
+				</AuxBus>
+			</AuxBusses>
 			<GameParameters>
 				<GameParameter Id="3677180323" Name="health"/>
 			</GameParameters>
@@ -53,12 +80,13 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="1807884002" Type="User" Language="SFX" Hash="{4B023BFB-E91D-A6EE-B014-D0E64B1A5265}">
+		<SoundBank Id="1807884002" Type="User" Language="SFX" Hash="{FB551417-FE64-037B-CD97-8D27AABE1776}">
 			<ShortName>game_audio_schoeffer</ShortName>
 			<Path>game_audio_schoeffer.bnk</Path>
 			<Media>
-				<File Id="15543886" Language="SFX" Streaming="false" Location="Memory">
+				<File Id="15543886" Language="SFX" Streaming="true" Location="Loose">
 					<ShortName>winnningMusic.wav</ShortName>
+					<Path>Media/15543886.wem</Path>
 					<CachePath>SFX/winnningMusic_10C4C929.wem</CachePath>
 				</File>
 				<File Id="26723888" Language="SFX" Streaming="false" Location="Memory">
@@ -101,13 +129,15 @@
 					<ShortName>FootStepsLeft.wav</ShortName>
 					<CachePath>SFX/FootStepsLeft_35D1DADB.wem</CachePath>
 				</File>
-				<File Id="452281267" Language="SFX" Streaming="false" Location="Memory">
+				<File Id="452281267" Language="SFX" Streaming="true" Location="Loose">
 					<ShortName>BassMusic.wav</ShortName>
+					<Path>Media/452281267.wem</Path>
 					<CachePath>SFX/BassMusic_A5DF8AED.wem</CachePath>
 				</File>
-				<File Id="485869988" Language="SFX" Streaming="false" Location="Memory">
+				<File Id="485869988" Language="SFX" Streaming="true" Location="Loose">
 					<ShortName>RestaurantAmbience.wav</ShortName>
-					<CachePath>SFX/RestaurantAmbience_25356133.wem</CachePath>
+					<Path>Media/485869988.wem</Path>
+					<CachePath>SFX/RestaurantAmbience_6C1FC193.wem</CachePath>
 				</File>
 				<File Id="506101012" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Damage.wav</ShortName>
@@ -129,8 +159,9 @@
 					<ShortName>Crickets.wav</ShortName>
 					<CachePath>SFX/Crickets_50A1E827.wem</CachePath>
 				</File>
-				<File Id="733136199" Language="SFX" Streaming="false" Location="Memory">
+				<File Id="733136199" Language="SFX" Streaming="true" Location="Loose">
 					<ShortName>Playground.wav</ShortName>
+					<Path>Media/733136199.wem</Path>
 					<CachePath>SFX/Playground_7E2BC24F.wem</CachePath>
 				</File>
 				<File Id="774176505" Language="SFX" Streaming="false" Location="Memory">
@@ -145,10 +176,6 @@
 					<ShortName>Landing.wav</ShortName>
 					<CachePath>SFX/Landing_10C4C929.wem</CachePath>
 				</File>
-				<File Id="816120673" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>FootStepsRight.wav</ShortName>
-					<CachePath>SFX/FootStepsRight_35D1DADB.wem</CachePath>
-				</File>
 				<File Id="882171577" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Boing.wav</ShortName>
 					<CachePath>SFX/Boing_10C4C929.wem</CachePath>
@@ -157,17 +184,27 @@
 					<ShortName>StepOnWood7.wav</ShortName>
 					<CachePath>SFX/StepOnWood7_10C4C929.wem</CachePath>
 				</File>
-				<File Id="992041622" Language="SFX" Streaming="false" Location="Memory">
+				<File Id="904371921" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FootStepsRight.wav</ShortName>
+					<CachePath>SFX/FootStepsRight_35D1DADB.wem</CachePath>
+				</File>
+				<File Id="992041622" Language="SFX" Streaming="true" Location="Loose">
 					<ShortName>BirdsChirping.wav</ShortName>
+					<Path>Media/992041622.wem</Path>
 					<CachePath>SFX/BirdsChirping_D79FB2B7.wem</CachePath>
 				</File>
 				<File Id="1024206037" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Doorbell.wav</ShortName>
 					<CachePath>SFX/Doorbell_10C4C929.wem</CachePath>
 				</File>
-				<File Id="1031638431" Language="SFX" Streaming="false" Location="Memory">
+				<File Id="1031638431" Language="SFX" Streaming="true" Location="Loose">
 					<ShortName>StreetNoises.wav</ShortName>
+					<Path>Media/1031638431.wem</Path>
 					<CachePath>SFX/StreetNoises_358F59A9.wem</CachePath>
+				</File>
+				<File Id="1066634447" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>heavyBreathing.wav</ShortName>
+					<CachePath>SFX/heavyBreathing_B11AAAC7.wem</CachePath>
 				</File>
 			</Media>
 			<Plugins>
@@ -177,6 +214,10 @@
 					<Plugin Id="607753830" Name="Attack_Remover (Custom)" LibName="Wwise Compressor" LibId="7077891"/>
 					<Plugin Id="1038869313" Name="Octave_Down (Custom)" LibName="Wwise Pitch Shifter" LibId="8912899"/>
 				</Custom>
+				<ShareSets>
+					<Plugin Id="1144018367" Name="Plate_Large" LibName="Wwise RoomVerb" LibId="7733251"/>
+					<Plugin Id="2995775460" Name="Room_Small" LibName="Wwise RoomVerb" LibId="7733251"/>
+				</ShareSets>
 			</Plugins>
 			<Events>
 				<Event Id="3196207338" Name="Play_background" DurationType="Infinite">
@@ -195,19 +236,9 @@
 						</Custom>
 					</PluginRefs>
 				</Event>
-				<Event Id="693128018" Name="Play_BarkingDog" DurationType="OneShot" DurationMin="6.4914966" DurationMax="6.4914966">
-					<MediaRefs>
-						<MediaRef Id="392022390"/>
-					</MediaRefs>
-				</Event>
 				<Event Id="3933864212" Name="Play_bassMusic" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="452281267"/>
-					</MediaRefs>
-				</Event>
-				<Event Id="3025897706" Name="Play_birds" DurationType="Infinite">
-					<MediaRefs>
-						<MediaRef Id="992041622"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="3698997709" Name="Play_boing" DurationType="OneShot" DurationMin="0.50600904" DurationMax="0.50600904">
@@ -220,22 +251,14 @@
 						<MediaRef Id="788579365"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2626596706" Name="Play_crickets" DurationType="Infinite">
-					<MediaRefs>
-						<MediaRef Id="164863198"/>
-						<MediaRef Id="415872005"/>
-						<MediaRef Id="619380089"/>
-					</MediaRefs>
-					<PluginRefs>
-						<Custom>
-							<PluginRef Id="62520426"/>
-							<PluginRef Id="607753830"/>
-						</Custom>
-					</PluginRefs>
-				</Event>
 				<Event Id="784302017" Name="Play_damage" DurationType="OneShot" DurationMin="1.3192517" DurationMax="1.3192517">
 					<MediaRefs>
 						<MediaRef Id="506101012"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1754141786" Name="Play_dogBark" DurationType="OneShot" DurationMin="6.4914966" DurationMax="6.4914966">
+					<MediaRefs>
+						<MediaRef Id="392022390"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="3778958205" Name="Play_doorbell" DurationType="OneShot" DurationMin="5.3421087" DurationMax="5.3421087">
@@ -243,9 +266,10 @@
 						<MediaRef Id="1024206037"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3765695918" Name="Play_heartbeat" DurationType="Infinite">
+				<Event Id="939831523" Name="Play_healthRepresentation" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="347083891"/>
+						<MediaRef Id="1066634447"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="3689126666" Name="Play_jump" DurationType="OneShot" DurationMin="0.5770068" DurationMax="0.5770068">
@@ -268,11 +292,6 @@
 						<MediaRef Id="485869988"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2737802779" Name="Play_streetNoise" DurationType="Infinite">
-					<MediaRefs>
-						<MediaRef Id="1031638431"/>
-					</MediaRefs>
-				</Event>
 				<Event Id="1733885923" Name="Play_walking" DurationType="Infinite">
 					<SwitchContainers>
 						<SwitchContainer>
@@ -286,7 +305,7 @@
 							<SwitchValue GroupType="Switch" GroupId="340271938" Id="4142189312" Default="true"/>
 							<MediaRefs>
 								<MediaRef Id="439914260"/>
-								<MediaRef Id="816120673"/>
+								<MediaRef Id="904371921"/>
 							</MediaRefs>
 							<PluginRefs>
 								<Custom>
@@ -308,11 +327,6 @@
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
-				<Event Id="3756431007" Name="Play_winningMusic" DurationType="OneShot" DurationMin="15.271996" DurationMax="15.271996">
-					<MediaRefs>
-						<MediaRef Id="15543886"/>
-					</MediaRefs>
-				</Event>
 			</Events>
 			<Busses>
 				<Bus Id="452819252" Name="reverbBetweenHouses">
@@ -324,6 +338,22 @@
 				</Bus>
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
 			</Busses>
+			<AuxBusses>
+				<AuxBus Id="2014821848" Name="IndoorReverb">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
+				</AuxBus>
+				<AuxBus Id="3319985400" Name="BetweenHousesReverb">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="1144018367"/>
+						</ShareSets>
+					</PluginRefs>
+				</AuxBus>
+			</AuxBusses>
 			<GameParameters>
 				<GameParameter Id="3677180323" Name="health"/>
 			</GameParameters>
@@ -337,7 +367,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3254967171" Type="User" Language="SFX" Hash="{3C6E38BF-94B4-BBAF-DA32-DF334538A5C9}">
+		<SoundBank Id="3254967171" Type="User" Language="SFX" Hash="{4FEED4F6-D409-D8AE-654C-D5F40E863AA0}">
 			<ShortName>indoor_sounds</ShortName>
 			<Path>indoor_sounds.bnk</Path>
 			<Media>
@@ -365,6 +395,10 @@
 					<ShortName>Hello.wav</ShortName>
 					<CachePath>SFX/Hello_10C4C929.wem</CachePath>
 				</File>
+				<File Id="347083891" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Hearbeat.wav</ShortName>
+					<CachePath>SFX/Hearbeat_D79FB2B7.wem</CachePath>
+				</File>
 				<File Id="439914260" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>FootStepsLeft.wav</ShortName>
 					<CachePath>SFX/FootStepsLeft_35D1DADB.wem</CachePath>
@@ -373,8 +407,9 @@
 					<ShortName>StepOnWood2.wav</ShortName>
 					<CachePath>SFX/StepOnWood2_10C4C929.wem</CachePath>
 				</File>
-				<File Id="543620922" Language="SFX" Streaming="false" Location="Memory">
+				<File Id="543620922" Language="SFX" Streaming="true" Location="Loose">
 					<ShortName>RestaurantAmbience.wav</ShortName>
+					<Path>Media/543620922.wem</Path>
 					<CachePath>SFX/RestaurantAmbience_10C4C929.wem</CachePath>
 				</File>
 				<File Id="561158872" Language="SFX" Streaming="false" Location="Memory">
@@ -397,13 +432,17 @@
 					<ShortName>Landing.wav</ShortName>
 					<CachePath>SFX/Landing_10C4C929.wem</CachePath>
 				</File>
-				<File Id="816120673" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>FootStepsRight.wav</ShortName>
-					<CachePath>SFX/FootStepsRight_35D1DADB.wem</CachePath>
-				</File>
 				<File Id="888997961" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>StepOnWood7.wav</ShortName>
 					<CachePath>SFX/StepOnWood7_10C4C929.wem</CachePath>
+				</File>
+				<File Id="904371921" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FootStepsRight.wav</ShortName>
+					<CachePath>SFX/FootStepsRight_35D1DADB.wem</CachePath>
+				</File>
+				<File Id="1066634447" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>heavyBreathing.wav</ShortName>
+					<CachePath>SFX/heavyBreathing_B11AAAC7.wem</CachePath>
 				</File>
 				<File Id="1068521209" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>TakingOrder.wav</ShortName>
@@ -419,6 +458,12 @@
 				<Event Id="1945722105" Name="Play_Bell" DurationType="OneShot" DurationMin="2.5" DurationMax="2.5">
 					<MediaRefs>
 						<MediaRef Id="592439996"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="939831523" Name="Play_healthRepresentation" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="347083891"/>
+						<MediaRef Id="1066634447"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="3689126666" Name="Play_jump" DurationType="OneShot" DurationMin="0.5770068" DurationMax="0.5770068">
@@ -455,7 +500,7 @@
 							<SwitchValue GroupType="Switch" GroupId="340271938" Id="4142189312" Default="true"/>
 							<MediaRefs>
 								<MediaRef Id="439914260"/>
-								<MediaRef Id="816120673"/>
+								<MediaRef Id="904371921"/>
 							</MediaRefs>
 							<PluginRefs>
 								<Custom>
@@ -478,6 +523,9 @@
 					</SwitchContainers>
 				</Event>
 			</Events>
+			<GameParameters>
+				<GameParameter Id="3677180323" Name="health"/>
+			</GameParameters>
 			<SwitchGroups>
 				<SwitchGroup Id="340271938" Name="walking">
 					<Switches>
@@ -489,5 +537,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{2756B044-136A-EF86-B774-733FCFF7666D}</FileHash>
+	<FileHash>{D33BE0C3-BB05-8988-2226-7DD93875E63C}</FileHash>
 </SoundBanksInfo>

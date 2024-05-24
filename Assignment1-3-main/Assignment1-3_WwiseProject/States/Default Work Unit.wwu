@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{464FDB7B-684A-42BB-8902-9535B9117D98}" SchemaVersion="110">
+	<States>
+		<WorkUnit Name="Default Work Unit" ID="{464FDB7B-684A-42BB-8902-9535B9117D98}" PersistMode="Standalone">
+			<ChildrenList>
+				<StateGroup Name="background" ID="{392D8106-868F-49DD-8E21-403E3F1F2F1B}">
+					<PropertyList>
+						<Property Name="DefaultTransitionTime" Type="Real64" Value="0"/>
+					</PropertyList>
+					<ChildrenList>
+						<State Name="None" ID="{D6E7DEE1-7278-47B4-BE89-0B57C03A29A2}"/>
+						<State Name="backgroundNoise" ID="{2B30C0A2-8E9C-4880-BAEC-0022878DD381}"/>
+						<State Name="winningMusic" ID="{E0768E3E-2A55-4A3D-94BE-6B097C4BA4F0}"/>
+					</ChildrenList>
+					<TransitionList>
+						<Transition>
+							<StartState Name="backgroundNoise" ID="{2B30C0A2-8E9C-4880-BAEC-0022878DD381}"/>
+							<EndState Name="winningMusic" ID="{E0768E3E-2A55-4A3D-94BE-6B097C4BA4F0}"/>
+							<Time>0</Time>
+							<IsShared>false</IsShared>
+						</Transition>
+						<Transition>
+							<StartState Name="winningMusic" ID="{E0768E3E-2A55-4A3D-94BE-6B097C4BA4F0}"/>
+							<EndState Name="backgroundNoise" ID="{2B30C0A2-8E9C-4880-BAEC-0022878DD381}"/>
+							<Time>0</Time>
+							<IsShared>false</IsShared>
+						</Transition>
+					</TransitionList>
+				</StateGroup>
+			</ChildrenList>
+		</WorkUnit>
+	</States>
+</WwiseDocument>

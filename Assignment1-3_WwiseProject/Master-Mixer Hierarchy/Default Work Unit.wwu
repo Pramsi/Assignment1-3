@@ -9,6 +9,22 @@
 							<ObjectRef Name="System" ID="{B3670B25-355F-400A-B078-7355D7822EB6}" WorkUnitID="{6C8F8F87-4180-47BB-9E76-042A8BBA6B0E}"/>
 						</Reference>
 					</ReferenceList>
+					<ChildrenList>
+						<AuxBus Name="IndoorReverb" ID="{B91CD447-94ED-4860-A9E0-41D181779B02}">
+							<ReferenceList>
+								<Reference Name="Effect0" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+									<ObjectRef Name="Room_Small" ID="{577F1466-A63B-47F7-98BD-C56E433F8B5D}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+								</Reference>
+							</ReferenceList>
+						</AuxBus>
+						<AuxBus Name="BetweenHousesReverb" ID="{0C27D82F-537B-4D7A-B6D9-CFCCD8A95DCA}">
+							<ReferenceList>
+								<Reference Name="Effect0" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+									<ObjectRef Name="Plate_Large" ID="{62CB7384-421D-4F9A-9CF1-E90F7336A07B}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+								</Reference>
+							</ReferenceList>
+						</AuxBus>
+					</ChildrenList>
 				</Bus>
 				<Bus Name="reverbBetweenHouses" ID="{4AC24815-63A4-4D74-A91D-6075898CBCFE}">
 					<ReferenceList>
@@ -39,6 +55,16 @@
 									</PropertyList>
 								</Effect>
 							</Custom>
+						</Reference>
+					</ReferenceList>
+				</Bus>
+				<Bus Name="IndoorReverbBus" ID="{6A02DB0E-44BC-4D5D-8B9D-0744D7FE820B}">
+					<ReferenceList>
+						<Reference Name="AudioDevice" PluginName="System" CompanyID="0" PluginID="174" PluginType="7">
+							<ObjectRef Name="System" ID="{B3670B25-355F-400A-B078-7355D7822EB6}" WorkUnitID="{6C8F8F87-4180-47BB-9E76-042A8BBA6B0E}"/>
+						</Reference>
+						<Reference Name="Effect0" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+							<ObjectRef Name="Room_Small" ID="{577F1466-A63B-47F7-98BD-C56E433F8B5D}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
 						</Reference>
 					</ReferenceList>
 				</Bus>

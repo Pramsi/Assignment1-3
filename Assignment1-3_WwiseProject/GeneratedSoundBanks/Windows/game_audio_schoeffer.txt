@@ -1,19 +1,15 @@
 Event	ID	Name			Wwise Object Path	Notes
-	693128018	Play_BarkingDog			\Default Work Unit\Play_BarkingDog	
 	784302017	Play_damage			\Default Work Unit\Play_damage	
+	939831523	Play_healthRepresentation			\Default Work Unit\Play_healthRepresentation	
 	1340983621	Play_RestaurantAmbienceOutdoor			\Default Work Unit\Play_RestaurantAmbienceOutdoor	
 	1733885923	Play_walking			\Default Work Unit\Play_walking	
+	1754141786	Play_dogBark			\Default Work Unit\Play_dogBark	
 	2228638855	Play_collectCoin			\Default Work Unit\Play_collectCoin	
 	2323405115	Play_landing			\Default Work Unit\Play_landing	
 	2393638833	Play_playground			\Default Work Unit\Play_playground	
-	2626596706	Play_crickets			\Default Work Unit\Play_crickets	
-	2737802779	Play_streetNoise			\Default Work Unit\Play_streetNoise	
-	3025897706	Play_birds			\Default Work Unit\Play_birds	
 	3196207338	Play_background			\Default Work Unit\Play_background	
 	3689126666	Play_jump			\Default Work Unit\Play_jump	
 	3698997709	Play_boing			\Default Work Unit\Play_boing	
-	3756431007	Play_winningMusic			\Default Work Unit\Play_winningMusic	
-	3765695918	Play_heartbeat			\Default Work Unit\Play_heartbeat	
 	3778958205	Play_doorbell			\Default Work Unit\Play_doorbell	
 	3933864212	Play_bassMusic			\Default Work Unit\Play_bassMusic	
 
@@ -44,39 +40,48 @@ Audio Bus	ID	Name			Wwise Object Path	Notes
 	452819252	reverbBetweenHouses			\Default Work Unit\reverbBetweenHouses	
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
 
+Auxiliary Bus	ID	Name			Wwise Object Path	Notes
+	2014821848	IndoorReverb			\Default Work Unit\Master Audio Bus\IndoorReverb	
+	3319985400	BetweenHousesReverb			\Default Work Unit\Master Audio Bus\BetweenHousesReverb	
+
 Effect plug-ins	ID	Name	Type				Notes
 	7850013	Have_U_Ever_Been_Outside (Custom)	Wwise RoomVerb			
 	62520426	Octave_Up (Custom)	Wwise Pitch Shifter			
 	607753830	Attack_Remover (Custom)	Wwise Compressor			
 	1038869313	Octave_Down (Custom)	Wwise Pitch Shifter			
+	1144018367	Plate_Large	Wwise RoomVerb			
+	2995775460	Room_Small	Wwise RoomVerb			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	15543886	winningMusic	C:\Users\Manuel\Desktop\FinalProjectGameAudio\Assignment1-3\Assignment1-3_WwiseProject\.cache\Windows\SFX\winnningMusic_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\background\winningMusic		2694076
 	26723888	StepRightGrass	C:\Users\Manuel\Desktop\FinalProjectGameAudio\Assignment1-3\Assignment1-3_WwiseProject\.cache\Windows\SFX\StepRightGrass_31AC151A.wem		\Actor-Mixer Hierarchy\Default Work Unit\walking\walkingGrass\StepRightGrass		79476
 	70300362	StepOnWood6	C:\Users\Manuel\Desktop\FinalProjectGameAudio\Assignment1-3\Assignment1-3_WwiseProject\.cache\Windows\SFX\StepOnWood6_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\walking\walkingWood\StepOnWood6		88296
-	109592295	Jump	C:\Users\Manuel\Desktop\FinalProjectGameAudio\Assignment1-3\Assignment1-3_WwiseProject\.cache\Windows\SFX\Jump_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\jump\Jump		101880
+	109592295	jump	C:\Users\Manuel\Desktop\FinalProjectGameAudio\Assignment1-3\Assignment1-3_WwiseProject\.cache\Windows\SFX\Jump_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\jump		101880
 	142785782	StepOnWood4	C:\Users\Manuel\Desktop\FinalProjectGameAudio\Assignment1-3\Assignment1-3_WwiseProject\.cache\Windows\SFX\StepOnWood4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\walking\walkingWood\StepOnWood4		88296
 	164863198	Crickets_02	C:\Users\Manuel\Desktop\FinalProjectGameAudio\Assignment1-3\Assignment1-3_WwiseProject\.cache\Windows\SFX\Crickets_5DEEC275.wem		\Actor-Mixer Hierarchy\Default Work Unit\background\backgroundNoise\crickets\Crickets_02		357316
 	189708257	StepLeftGrass	C:\Users\Manuel\Desktop\FinalProjectGameAudio\Assignment1-3\Assignment1-3_WwiseProject\.cache\Windows\SFX\StepLeftGrass_31AC151A.wem		\Actor-Mixer Hierarchy\Default Work Unit\walking\walkingGrass\StepLeftGrass		79476
-	347083891	heartbeat	C:\Users\Manuel\Desktop\FinalProjectGameAudio\Assignment1-3\Assignment1-3_WwiseProject\.cache\Windows\SFX\Hearbeat_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\heartbeat		88296
-	392022390	BarkingDog	C:\Users\Manuel\Desktop\FinalProjectGameAudio\Assignment1-3\Assignment1-3_WwiseProject\.cache\Windows\SFX\BarkingDog_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\dogBark\BarkingDog		1145196
+	347083891	heartbeat	C:\Users\Manuel\Desktop\FinalProjectGameAudio\Assignment1-3\Assignment1-3_WwiseProject\.cache\Windows\SFX\Hearbeat_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\healthRepresentation\heartbeat		88296
+	392022390	dogBark	C:\Users\Manuel\Desktop\FinalProjectGameAudio\Assignment1-3\Assignment1-3_WwiseProject\.cache\Windows\SFX\BarkingDog_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\dogBark		1145196
 	415872005	Crickets	C:\Users\Manuel\Desktop\FinalProjectGameAudio\Assignment1-3\Assignment1-3_WwiseProject\.cache\Windows\SFX\Crickets_29AE521E.wem		\Actor-Mixer Hierarchy\Default Work Unit\background\backgroundNoise\crickets\Crickets		572916
 	439914260	FootStepsLeft	C:\Users\Manuel\Desktop\FinalProjectGameAudio\Assignment1-3\Assignment1-3_WwiseProject\.cache\Windows\SFX\FootStepsLeft_35D1DADB.wem		\Actor-Mixer Hierarchy\Default Work Unit\walking\walkingStreet\FootStepsLeft		79476
-	452281267	BassMusic	C:\Users\Manuel\Desktop\FinalProjectGameAudio\Assignment1-3\Assignment1-3_WwiseProject\.cache\Windows\SFX\BassMusic_A5DF8AED.wem		\Actor-Mixer Hierarchy\Default Work Unit\bassMusic\BassMusic		33352092
-	485869988	RestaurantAmbienceOutdoor	C:\Users\Manuel\Desktop\FinalProjectGameAudio\Assignment1-3\Assignment1-3_WwiseProject\.cache\Windows\SFX\RestaurantAmbience_25356133.wem		\Actor-Mixer Hierarchy\Default Work Unit\RestaurantAmbienceOutdoor		4973232
-	506101012	Damage	C:\Users\Manuel\Desktop\FinalProjectGameAudio\Assignment1-3\Assignment1-3_WwiseProject\.cache\Windows\SFX\Damage_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\damage\Damage		232812
+	506101012	damage	C:\Users\Manuel\Desktop\FinalProjectGameAudio\Assignment1-3\Assignment1-3_WwiseProject\.cache\Windows\SFX\Damage_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\damage		232812
 	522474302	StepOnWood2	C:\Users\Manuel\Desktop\FinalProjectGameAudio\Assignment1-3\Assignment1-3_WwiseProject\.cache\Windows\SFX\StepOnWood2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\walking\walkingWood\StepOnWood2		88296
 	561158872	StepOnWood5	C:\Users\Manuel\Desktop\FinalProjectGameAudio\Assignment1-3\Assignment1-3_WwiseProject\.cache\Windows\SFX\StepOnWood5_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\walking\walkingWood\StepOnWood5		88296
 	617368685	StepOnWood3	C:\Users\Manuel\Desktop\FinalProjectGameAudio\Assignment1-3\Assignment1-3_WwiseProject\.cache\Windows\SFX\StepOnWood3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\walking\walkingWood\StepOnWood3		88296
 	619380089	Crickets_01	C:\Users\Manuel\Desktop\FinalProjectGameAudio\Assignment1-3\Assignment1-3_WwiseProject\.cache\Windows\SFX\Crickets_50A1E827.wem		\Actor-Mixer Hierarchy\Default Work Unit\background\backgroundNoise\crickets\Crickets_01		148056
-	733136199	Playground	C:\Users\Manuel\Desktop\FinalProjectGameAudio\Assignment1-3\Assignment1-3_WwiseProject\.cache\Windows\SFX\Playground_7E2BC24F.wem		\Actor-Mixer Hierarchy\Default Work Unit\playground\Playground		3012156
 	774176505	StepOnWood1	C:\Users\Manuel\Desktop\FinalProjectGameAudio\Assignment1-3\Assignment1-3_WwiseProject\.cache\Windows\SFX\StepOnWood1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\walking\walkingWood\StepOnWood1		88296
-	788579365	collectCoin	C:\Users\Manuel\Desktop\FinalProjectGameAudio\Assignment1-3\Assignment1-3_WwiseProject\.cache\Windows\SFX\collectCoin_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\collectCoin\collectCoin		232812
-	795206288	Landing	C:\Users\Manuel\Desktop\FinalProjectGameAudio\Assignment1-3\Assignment1-3_WwiseProject\.cache\Windows\SFX\Landing_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\landing\Landing		52664
-	816120673	FootStepsRight	C:\Users\Manuel\Desktop\FinalProjectGameAudio\Assignment1-3\Assignment1-3_WwiseProject\.cache\Windows\SFX\FootStepsRight_35D1DADB.wem		\Actor-Mixer Hierarchy\Default Work Unit\walking\walkingStreet\FootStepsRight		79476
-	882171577	Boing	C:\Users\Manuel\Desktop\FinalProjectGameAudio\Assignment1-3\Assignment1-3_WwiseProject\.cache\Windows\SFX\Boing_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\boing\Boing		89356
+	788579365	collectCoin	C:\Users\Manuel\Desktop\FinalProjectGameAudio\Assignment1-3\Assignment1-3_WwiseProject\.cache\Windows\SFX\collectCoin_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\collectCoin		232812
+	795206288	landing	C:\Users\Manuel\Desktop\FinalProjectGameAudio\Assignment1-3\Assignment1-3_WwiseProject\.cache\Windows\SFX\Landing_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\landing		52664
+	882171577	boing	C:\Users\Manuel\Desktop\FinalProjectGameAudio\Assignment1-3\Assignment1-3_WwiseProject\.cache\Windows\SFX\Boing_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\boing		89356
 	888997961	StepOnWood7	C:\Users\Manuel\Desktop\FinalProjectGameAudio\Assignment1-3\Assignment1-3_WwiseProject\.cache\Windows\SFX\StepOnWood7_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\walking\walkingWood\StepOnWood7		88296
-	992041622	BirdsChirping	C:\Users\Manuel\Desktop\FinalProjectGameAudio\Assignment1-3\Assignment1-3_WwiseProject\.cache\Windows\SFX\BirdsChirping_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\background\backgroundNoise\birds\BirdsChirping		10140080
-	1024206037	Doorbell	C:\Users\Manuel\Desktop\FinalProjectGameAudio\Assignment1-3\Assignment1-3_WwiseProject\.cache\Windows\SFX\Doorbell_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\doorbell\Doorbell		942444
-	1031638431	StreetNoises	C:\Users\Manuel\Desktop\FinalProjectGameAudio\Assignment1-3\Assignment1-3_WwiseProject\.cache\Windows\SFX\StreetNoises_358F59A9.wem		\Actor-Mixer Hierarchy\Default Work Unit\background\backgroundNoise\streetNoise\StreetNoises		2146872
+	904371921	FootStepsRight	C:\Users\Manuel\Desktop\FinalProjectGameAudio\Assignment1-3\Assignment1-3_WwiseProject\.cache\Windows\SFX\FootStepsRight_35D1DADB.wem		\Actor-Mixer Hierarchy\Default Work Unit\walking\walkingStreet\FootStepsRight		79476
+	1024206037	doorbell	C:\Users\Manuel\Desktop\FinalProjectGameAudio\Assignment1-3\Assignment1-3_WwiseProject\.cache\Windows\SFX\Doorbell_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\doorbell		942444
+	1066634447	heavyBreathing	C:\Users\Manuel\Desktop\FinalProjectGameAudio\Assignment1-3\Assignment1-3_WwiseProject\.cache\Windows\SFX\heavyBreathing_B11AAAC7.wem		\Actor-Mixer Hierarchy\Default Work Unit\healthRepresentation\heavyBreathing		516888
+
+Streamed Audio	ID	Name	Audio source file	Generated audio file	Wwise Object Path	Notes
+	15543886	winningMusic	C:\Users\Manuel\Desktop\FinalProjectGameAudio\Assignment1-3\Assignment1-3_WwiseProject\.cache\Windows\SFX\winnningMusic_10C4C929.wem	15543886.wem	\Actor-Mixer Hierarchy\Default Work Unit\background\winningMusic	
+	452281267	bassMusic	C:\Users\Manuel\Desktop\FinalProjectGameAudio\Assignment1-3\Assignment1-3_WwiseProject\.cache\Windows\SFX\BassMusic_A5DF8AED.wem	452281267.wem	\Actor-Mixer Hierarchy\Default Work Unit\bassMusic	
+	485869988	RestaurantAmbienceOutdoor	C:\Users\Manuel\Desktop\FinalProjectGameAudio\Assignment1-3\Assignment1-3_WwiseProject\.cache\Windows\SFX\RestaurantAmbience_6C1FC193.wem	485869988.wem	\Actor-Mixer Hierarchy\Default Work Unit\RestaurantAmbienceOutdoor	
+	733136199	playground	C:\Users\Manuel\Desktop\FinalProjectGameAudio\Assignment1-3\Assignment1-3_WwiseProject\.cache\Windows\SFX\Playground_7E2BC24F.wem	733136199.wem	\Actor-Mixer Hierarchy\Default Work Unit\playground	
+	992041622	BirdsChirping	C:\Users\Manuel\Desktop\FinalProjectGameAudio\Assignment1-3\Assignment1-3_WwiseProject\.cache\Windows\SFX\BirdsChirping_D79FB2B7.wem	992041622.wem	\Actor-Mixer Hierarchy\Default Work Unit\background\backgroundNoise\BirdsChirping	
+	1031638431	StreetNoises	C:\Users\Manuel\Desktop\FinalProjectGameAudio\Assignment1-3\Assignment1-3_WwiseProject\.cache\Windows\SFX\StreetNoises_358F59A9.wem	1031638431.wem	\Actor-Mixer Hierarchy\Default Work Unit\background\backgroundNoise\StreetNoises	
 

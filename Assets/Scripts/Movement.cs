@@ -75,6 +75,7 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(SceneManager.GetActiveScene().name);
 
         PerformMovement();
         /* if (Input.GetKey(KeyCode.W))
@@ -107,7 +108,6 @@ public class Movement : MonoBehaviour
     {
         Vector2 movementDirection = inputValue.Get<Vector2>();
         movementDirection3d = new Vector3(movementDirection.x, 0, movementDirection.y);
-Debug.Log(walkingId);  
 
         if (_isGrounded)
         {
@@ -195,7 +195,7 @@ Debug.Log(walkingId);
     { 
         if(other.gameObject.tag == "DogHouse")
         {
-            dogHouseId = AkSoundEngine.PostEvent("Play_BarkingDog", gameObject);
+            dogHouseId = AkSoundEngine.PostEvent("Play_dogBark", gameObject);
         }
 
         if (other.gameObject.tag == "RestaurantAmbientTrigger")
@@ -206,6 +206,7 @@ Debug.Log(walkingId);
 
         if (other.gameObject.tag == "Coin")
         {
+            
             AkSoundEngine.PostEvent("Play_collectCoin", gameObject);
         }
 
@@ -230,7 +231,7 @@ Debug.Log(walkingId);
             AkSoundEngine.StopPlayingID((uint)walkingId);
             walkingId = -1;
             _isGrounded = false;
-            _rigidbody.AddForce(new Vector3(0, _jumpPower*2, 0), ForceMode.Impulse);
+            _rigidbody.AddForce(new Vector3(0, _jumpPower*1.5f, 0), ForceMode.Impulse);
 
             AkSoundEngine.PostEvent("Play_boing", gameObject);
         }
@@ -251,7 +252,7 @@ Debug.Log(walkingId);
 
         if (other.gameObject.tag == "OrderTrigger")
         {
-            loudHouseId = AkSoundEngine.PostEvent("Play_takingOrder", gameObject);
+            AkSoundEngine.PostEvent("Play_takingOrder", gameObject);
         }
 
 
@@ -261,7 +262,7 @@ Debug.Log(walkingId);
     {
         if(other.gameObject.tag == "Playground")
         {
-            AkSoundEngine.StopPlayingID(playgroundId, 2000);
+            AkSoundEngine.StopPlayingID(playgroundId, 1000);
         }
 
         if (other.gameObject.tag == "DogHouse")

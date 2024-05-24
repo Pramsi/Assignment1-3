@@ -7,11 +7,18 @@ State	ID	Name	State Group			Notes
 	4067680020	winningMusic	background			
 
 Audio Bus	ID	Name			Wwise Object Path	Notes
+	45429314	IndoorReverbBus			\Default Work Unit\IndoorReverbBus	
 	452819252	reverbBetweenHouses			\Default Work Unit\reverbBetweenHouses	
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
 
+Auxiliary Bus	ID	Name			Wwise Object Path	Notes
+	2014821848	IndoorReverb			\Default Work Unit\Master Audio Bus\IndoorReverb	
+	3319985400	BetweenHousesReverb			\Default Work Unit\Master Audio Bus\BetweenHousesReverb	
+
 Effect plug-ins	ID	Name	Type				Notes
 	7850013	Have_U_Ever_Been_Outside (Custom)	Wwise RoomVerb			
+	1144018367	Plate_Large	Wwise RoomVerb			
+	2995775460	Room_Small	Wwise RoomVerb			
 
 Audio Devices	ID	Name	Type				Notes
 	2317455096	No_Output	No Output			
