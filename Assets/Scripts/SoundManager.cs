@@ -30,6 +30,8 @@ public class SoundManager : MonoBehaviour
 
     void Start()
     {
+        AkSoundEngine.SetRTPCValue("health", GameManager.Instance.savedPlayerData.health);
+        AkSoundEngine.PostEvent("Play_healthRepresentation", gameObject);
         AkSoundEngine.SetState("background", "backgroundNoise");
         backgroundId = AkSoundEngine.PostEvent("Play_background", gameObject);
         currentSceneName = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
