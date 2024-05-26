@@ -80,7 +80,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="1807884002" Type="User" Language="SFX" Hash="{FB551417-FE64-037B-CD97-8D27AABE1776}">
+		<SoundBank Id="1807884002" Type="User" Language="SFX" Hash="{FFCD6482-E154-3F63-D1EB-725AB2A11586}">
 			<ShortName>game_audio_schoeffer</ShortName>
 			<Path>game_audio_schoeffer.bnk</Path>
 			<Media>
@@ -204,7 +204,7 @@
 				</File>
 				<File Id="1066634447" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>heavyBreathing.wav</ShortName>
-					<CachePath>SFX/heavyBreathing_B11AAAC7.wem</CachePath>
+					<CachePath>SFX/heavyBreathing_144B8E59.wem</CachePath>
 				</File>
 			</Media>
 			<Plugins>
@@ -367,7 +367,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3254967171" Type="User" Language="SFX" Hash="{4FEED4F6-D409-D8AE-654C-D5F40E863AA0}">
+		<SoundBank Id="3254967171" Type="User" Language="SFX" Hash="{5F922EF1-A79B-5AD1-A3BD-86BC5C11DB71}">
 			<ShortName>indoor_sounds</ShortName>
 			<Path>indoor_sounds.bnk</Path>
 			<Media>
@@ -442,7 +442,7 @@
 				</File>
 				<File Id="1066634447" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>heavyBreathing.wav</ShortName>
-					<CachePath>SFX/heavyBreathing_B11AAAC7.wem</CachePath>
+					<CachePath>SFX/heavyBreathing_144B8E59.wem</CachePath>
 				</File>
 				<File Id="1068521209" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>TakingOrder.wav</ShortName>
@@ -537,5 +537,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{D33BE0C3-BB05-8988-2226-7DD93875E63C}</FileHash>
+	<FileHash>{D4D242EA-6AF2-A20A-EFB6-26B74932197B}</FileHash>
 </SoundBanksInfo>

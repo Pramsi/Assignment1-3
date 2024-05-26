@@ -24,11 +24,11 @@ public class Movement : MonoBehaviour
     [SerializeField]
     private float _jumpPower = 1;
 
-    [SerializeField]
-    private ForceMode _selectedForceMode;
+    //[SerializeField]
+    //private ForceMode _selectedForceMode;
 
-    [SerializeField]
-    private MovementType movementType;
+    //[SerializeField]
+    //private MovementType movementType;
     
     private Vector3 movementDirection3d;
     private Rigidbody _rigidbody;
@@ -36,6 +36,8 @@ public class Movement : MonoBehaviour
     private bool _isGrounded = true;
     private bool _isLanding = false;
     private bool _isMoving = false;
+    private bool _isWalkingSoundPlaying = false;
+
 
     private uint playgroundId;
     private uint dogHouseId;
@@ -45,7 +47,7 @@ public class Movement : MonoBehaviour
     private uint outdoorRestaurantAmbienceId;
 
     private int walkingId = -1;
-    private int movementKeysPressed = 0;
+    //private int movementKeysPressed = 0;
 
 
 
@@ -57,85 +59,127 @@ public class Movement : MonoBehaviour
             return;
 
         _rigidbody = gameObject.GetComponent<Rigidbody>();
-
-   if( SceneManager.GetActiveScene().name == "FirstScene") {
-            AkSoundEngine.SetState("background", "backgroundNoise");
-            backgroundId = AkSoundEngine.PostEvent("Play_background", gameObject);
-            AkSoundEngine.SetSwitch("walking", "street", gameObject);
-        }
-        else if (SceneManager.GetActiveScene().name == "Indoor")
-        {
-            AkSoundEngine.PostEvent("Play_Bell", gameObject);
-            restaurantAmbienceId = AkSoundEngine.PostEvent("Play_RestaurantAmbience", gameObject);
-        }
            
 
     }
+
 
     // Update is called once per frame
     void Update()
     {
 
+
+        
+
         PerformMovement();
-        /* if (Input.GetKey(KeyCode.W))
-             gameObject.transform.position += new Vector3(0, 0, -1f) * _velocity;*/
-        if(movementDirection3d != Vector3.zero)
-        {
-            _isMoving = true;
-        } else
-        {
-            _isMoving= false;   
-        }
-        
+        _isMoving = CheckIfMoving();
+
+
     }
 
-    void PerformMovement()
-    {
-        if(movementType == MovementType.TransformBased)
-        {
-        gameObject.transform.position += movementDirection3d * _velocity;
 
-        } else if(movementType == MovementType.PhysicsBased)
+    private bool CheckIfMoving()
+    {
+        if (movementDirection3d.magnitude > 0)
         {
-        _rigidbody.AddForce(movementDirection3d, _selectedForceMode);
+            return _isMoving = true;
         }
-        
-        
+        else
+        {
+            return _isMoving = false;
+        }
     }
 
-    void OnMovement(InputValue inputValue)
+    private void PlayWalkingSounds()
     {
-        Vector2 movementDirection = inputValue.Get<Vector2>();
-        movementDirection3d = new Vector3(movementDirection.x, 0, movementDirection.y);
-
-        if (_isGrounded)
+        if (!_isWalkingSoundPlaying)
         {
-            // Check if any of the movement keys are pressed down
-            if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.D))
-            {
-                movementKeysPressed++;
+            walkingId = (int)AkSoundEngine.PostEvent("Play_walking", gameObject);
+            _isWalkingSoundPlaying = true;
+        }
+    }
 
-                // Play walking sound only if it's not already playing
-                if (walkingId == -1)
-                {
-                    walkingId = (int)AkSoundEngine.PostEvent("Play_walking", gameObject);
+    private void StopWalkingSounds()
+    {
+        AkSoundEngine.StopPlayingID((uint)walkingId);
+        walkingId = -1; // Reset walkingId
+        _isWalkingSoundPlaying = false;
+
+    }
+
+    private void PerformMovement()
+    {
+        // Get movement input from Unity's new input system
+        Vector3 movementDirection = new Vector3(
+            Keyboard.current.dKey.ReadValue() - Keyboard.current.aKey.ReadValue(),
+            0f,
+            Keyboard.current.wKey.ReadValue() - Keyboard.current.sKey.ReadValue()
+        ).normalized;
+
+        _isMoving = movementDirection != Vector3.zero;
+
+        // Move the player based on the input direction and velocity
+        _rigidbody.MovePosition(transform.position + (movementDirection * -1) * _velocity * Time.deltaTime);
+
+        if (_isMoving)
+        {
+            // Call a method to play walking sounds
+            PlayWalkingSounds();
+        }
+        else
+        {
+            // Stop walking sounds when the player is not moving
+            StopWalkingSounds();
+        }
+    }
+
+    //void PerformMovement()
+    //{
+    //    if(movementType == MovementType.TransformBased)
+    //    {
+    //    gameObject.transform.position += movementDirection3d * _velocity;
+
+    //    } else if(movementType == MovementType.PhysicsBased)
+    //    {
+    //    _rigidbody.AddForce(movementDirection3d, _selectedForceMode);
+    //    }
+        
+        
+    //}
+
+    //void OnMovement(InputValue inputValue)
+    //{
+    //    Vector2 movementDirection = inputValue.Get<Vector2>();
+    //    movementDirection3d = new Vector3(movementDirection.x, 0, movementDirection.y);
+
+    //    if (_isGrounded)
+    //    {
+    //        // Check if any of the movement keys are pressed down
+    //        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.D))
+    //        {
+    //            movementKeysPressed++;
+
+    //            // Play walking sound only if it's not already playing
+    //            if (walkingId == -1)
+    //            {
+    //                walkingId = (int)AkSoundEngine.PostEvent("Play_walking", gameObject);
                      
-                }
-            }
+    //            }
+    //        }
 
-            if (Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.D))
-            {
-                movementKeysPressed--;
+    //        if (Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.D))
+    //        {
+    //            movementKeysPressed--;
 
-                if (movementKeysPressed == 0)
-                {
-                    AkSoundEngine.StopPlayingID((uint)walkingId);
-                    walkingId = -1; // Reset walkingId
-                }
-            }
+    //            if (movementKeysPressed == 0)
+    //            {
+    //                AkSoundEngine.StopPlayingID((uint)walkingId);
+    //                walkingId = -1; // Reset walkingId
+    //            }
+    //        }
 
-        }
-    }
+    //    }
+    //}
 
     void OnJump(InputValue inputValue)
     {
@@ -154,6 +198,10 @@ public class Movement : MonoBehaviour
 
     void OnCollisionEnter(Collision other)
     {
+        Debug.Log(other.gameObject.name);
+
+
+
         if (other.gameObject.tag == "Grounded")
         {
             _isGrounded = true;

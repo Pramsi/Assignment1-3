@@ -26,12 +26,7 @@ public class PlayerSpawnManager : MonoBehaviour
         yield return null; // Wait one frame to ensure GameManager and playerInstance are ready
         if (GameManager.Instance != null && GameManager.Instance.playerInstance != null)
         {
-            Debug.Log("OnSceneLoaded: Moving player to spawn point in scene: " + SceneManager.GetActiveScene().name);
             GameManager.Instance.MovePlayerToSpawnPoint(spawnPoint.position);
-        }
-        else
-        {
-            Debug.LogWarning("OnSceneLoaded: GameManager or playerInstance is null.");
         }
     }
 }

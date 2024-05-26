@@ -28,13 +28,8 @@ public class GameManager : MonoBehaviour
     {
         if (playerPrefab != null)
         {
-            Debug.Log("Spawning player from GameManager.");
             playerInstance = Instantiate(playerPrefab);
             DontDestroyOnLoad(playerInstance);
-        }
-        else
-        {
-            Debug.LogWarning("PlayerPrefab is not assigned in the GameManager.");
         }
     }
 
@@ -42,12 +37,12 @@ public class GameManager : MonoBehaviour
     {
         if (playerInstance != null)
         {
-            Debug.Log("Moving player to spawn point: " + spawnPosition);
             playerInstance.transform.position = spawnPosition;
-        }
-        else
-        {
-            Debug.LogWarning("PlayerInstance is not available.");
+
+            foreach (Transform child in playerInstance.transform)
+            {
+                child.localPosition = Vector3.zero;
+            }
         }
     }
 

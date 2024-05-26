@@ -75,7 +75,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	888997961	StepOnWood7	C:\Users\Manuel\Desktop\FinalProjectGameAudio\Assignment1-3\Assignment1-3_WwiseProject\.cache\Windows\SFX\StepOnWood7_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\walking\walkingWood\StepOnWood7		88296
 	904371921	FootStepsRight	C:\Users\Manuel\Desktop\FinalProjectGameAudio\Assignment1-3\Assignment1-3_WwiseProject\.cache\Windows\SFX\FootStepsRight_35D1DADB.wem		\Actor-Mixer Hierarchy\Default Work Unit\walking\walkingStreet\FootStepsRight		79476
 	1024206037	doorbell	C:\Users\Manuel\Desktop\FinalProjectGameAudio\Assignment1-3\Assignment1-3_WwiseProject\.cache\Windows\SFX\Doorbell_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\doorbell		942444
-	1066634447	heavyBreathing	C:\Users\Manuel\Desktop\FinalProjectGameAudio\Assignment1-3\Assignment1-3_WwiseProject\.cache\Windows\SFX\heavyBreathing_B11AAAC7.wem		\Actor-Mixer Hierarchy\Default Work Unit\healthRepresentation\heavyBreathing		516888
+	1066634447	heavyBreathing	C:\Users\Manuel\Desktop\FinalProjectGameAudio\Assignment1-3\Assignment1-3_WwiseProject\.cache\Windows\SFX\heavyBreathing_144B8E59.wem		\Actor-Mixer Hierarchy\Default Work Unit\healthRepresentation\heavyBreathing		516888
 
 Streamed Audio	ID	Name	Audio source file	Generated audio file	Wwise Object Path	Notes
 	15543886	winningMusic	C:\Users\Manuel\Desktop\FinalProjectGameAudio\Assignment1-3\Assignment1-3_WwiseProject\.cache\Windows\SFX\winnningMusic_10C4C929.wem	15543886.wem	\Actor-Mixer Hierarchy\Default Work Unit\background\winningMusic	
