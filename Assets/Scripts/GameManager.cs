@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -11,7 +12,6 @@ public class GameManager : MonoBehaviour
 
     void Awake()
     {
-        Application.targetFrameRate = 60;
         if (Instance == null)
         {
             DontDestroyOnLoad(gameObject);
@@ -26,15 +26,33 @@ public class GameManager : MonoBehaviour
 
     void SpawnPlayer()
     {
-        playerInstance = Instantiate(playerPrefab);
-        DontDestroyOnLoad(playerInstance);
+        if (playerPrefab != null)
+        {
+            Debug.Log("Spawning player from GameManager.");
+            playerInstance = Instantiate(playerPrefab);
+            DontDestroyOnLoad(playerInstance);
+        }
+        else
+        {
+            Debug.LogWarning("PlayerPrefab is not assigned in the GameManager.");
+        }
     }
 
     public void MovePlayerToSpawnPoint(Vector3 spawnPosition)
     {
         if (playerInstance != null)
         {
+            Debug.Log("Moving player to spawn point: " + spawnPosition);
             playerInstance.transform.position = spawnPosition;
         }
+        else
+        {
+            Debug.LogWarning("PlayerInstance is not available.");
+        }
+    }
+
+    public void LoadScene(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
     }
 }

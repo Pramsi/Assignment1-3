@@ -75,7 +75,6 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(SceneManager.GetActiveScene().name);
 
         PerformMovement();
         /* if (Input.GetKey(KeyCode.W))
