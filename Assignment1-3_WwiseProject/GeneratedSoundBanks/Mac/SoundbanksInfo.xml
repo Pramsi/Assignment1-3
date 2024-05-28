@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{81D3873F-56EA-8574-8FA3-95A28E99814C}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{8DE0B984-4D1A-2BC2-238A-E1CAF956C445}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -80,7 +80,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="1807884002" Type="User" Language="SFX" Hash="{FFCD6482-E154-3F63-D1EB-725AB2A11586}">
+		<SoundBank Id="1807884002" Type="User" Language="SFX" Hash="{6BA6BA5F-FB4B-1434-CEC5-091C5C745667}">
 			<ShortName>game_audio_schoeffer</ShortName>
 			<Path>game_audio_schoeffer.bnk</Path>
 			<Media>
@@ -537,5 +537,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{D4D242EA-6AF2-A20A-EFB6-26B74932197B}</FileHash>
+	<FileHash>{7C5DD2AF-B48E-0A35-A386-13FE529CB0EC}</FileHash>
 </SoundBanksInfo>
