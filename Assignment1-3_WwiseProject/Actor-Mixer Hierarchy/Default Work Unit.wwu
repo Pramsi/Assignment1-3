@@ -478,6 +478,9 @@
 						<Reference Name="SwitchGroupOrStateGroup">
 							<ObjectRef Name="walking" ID="{F66E035F-FFBC-4C97-B405-A575B3B1B66B}" WorkUnitID="{9DD4ABAF-9787-4B98-94E9-B161359797B8}"/>
 						</Reference>
+						<Reference Name="UserAuxSend0">
+							<ObjectRef Name="IndoorReverb" ID="{B91CD447-94ED-4860-A9E0-41D181779B02}" WorkUnitID="{4DBC27A7-B3B6-41EA-B217-ED60E12C521B}"/>
+						</Reference>
 					</ReferenceList>
 					<ChildrenList>
 						<RandomSequenceContainer Name="walkingGrass" ID="{5968B94D-9566-4397-A1C8-5D4F043F106D}" ShortID="325249739">
@@ -768,7 +771,7 @@
 								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>6</Value>
+										<Value>-3</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>

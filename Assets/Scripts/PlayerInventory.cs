@@ -8,7 +8,6 @@ public class PlayerInventory : MonoBehaviour
     private bool _initialLifesSet = false;
     public static PlayerInventory Instance;
 
-
     public PlayerStatistics localPlayerData = new PlayerStatistics();
 
     private bool _winningSoundPlayed = false;
@@ -36,14 +35,13 @@ public class PlayerInventory : MonoBehaviour
     private void Update()
     {
         if (!_winningSoundPlayed) { 
-
-        if (Instance.localPlayerData.coins == 9)
-        {
+            if (Instance.localPlayerData.coins == 9)
+            {
             AkSoundEngine.SetState("background", "winningMusic");
             AkSoundEngine.PostEvent("Play_background", gameObject);
             _winningSoundPlayed=true;
-        }
-    }
+            }
+        }      
     }
 
     void Start()

@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{59CA4B03-1295-43E0-8183-299272D1483C}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{A6358491-C625-A432-4C8E-9D0974263782}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -80,54 +80,54 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="1807884002" Type="User" Language="SFX" Hash="{6BA6BA5F-FB4B-1434-CEC5-091C5C745667}">
+		<SoundBank Id="1807884002" Type="User" Language="SFX" Hash="{9201852D-80B3-E47A-3BB4-5BF9C815F36D}">
 			<ShortName>game_audio_schoeffer</ShortName>
 			<Path>game_audio_schoeffer.bnk</Path>
 			<Media>
 				<File Id="15543886" Language="SFX" Streaming="true" Location="Loose">
 					<ShortName>winnningMusic.wav</ShortName>
 					<Path>Media/15543886.wem</Path>
-					<CachePath>SFX/winnningMusic_10C4C929.wem</CachePath>
+					<CachePath>SFX/winnningMusic_F58AE4B6.wem</CachePath>
 				</File>
 				<File Id="26723888" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>StepRightGrass.wav</ShortName>
-					<CachePath>SFX/StepRightGrass_31AC151A.wem</CachePath>
+					<CachePath>SFX/StepRightGrass_DFD0C2AA.wem</CachePath>
 				</File>
 				<File Id="70300362" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>StepOnWood6.wav</ShortName>
-					<CachePath>SFX/StepOnWood6_10C4C929.wem</CachePath>
+					<CachePath>SFX/StepOnWood6_B05EB4B9.wem</CachePath>
 				</File>
 				<File Id="109592295" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Jump.wav</ShortName>
-					<CachePath>SFX/Jump_10C4C929.wem</CachePath>
+					<CachePath>SFX/Jump_B05EB4B9.wem</CachePath>
 				</File>
 				<File Id="142785782" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>StepOnWood4.wav</ShortName>
-					<CachePath>SFX/StepOnWood4_10C4C929.wem</CachePath>
+					<CachePath>SFX/StepOnWood4_B05EB4B9.wem</CachePath>
 				</File>
 				<File Id="164863198" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Crickets.wav</ShortName>
-					<CachePath>SFX/Crickets_5DEEC275.wem</CachePath>
+					<CachePath>SFX/Crickets_4FD9960A.wem</CachePath>
 				</File>
 				<File Id="189708257" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>StepLeftGrass.wav</ShortName>
-					<CachePath>SFX/StepLeftGrass_31AC151A.wem</CachePath>
+					<CachePath>SFX/StepLeftGrass_DFD0C2AA.wem</CachePath>
 				</File>
 				<File Id="347083891" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Hearbeat.wav</ShortName>
-					<CachePath>SFX/Hearbeat_D79FB2B7.wem</CachePath>
+					<CachePath>SFX/Hearbeat_10AEC600.wem</CachePath>
 				</File>
 				<File Id="392022390" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>BarkingDog.wav</ShortName>
-					<CachePath>SFX/BarkingDog_10C4C929.wem</CachePath>
+					<CachePath>SFX/BarkingDog_B05EB4B9.wem</CachePath>
 				</File>
 				<File Id="415872005" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Crickets.wav</ShortName>
-					<CachePath>SFX/Crickets_29AE521E.wem</CachePath>
+					<CachePath>SFX/Crickets_64DCC641.wem</CachePath>
 				</File>
 				<File Id="439914260" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>FootStepsLeft.wav</ShortName>
-					<CachePath>SFX/FootStepsLeft_35D1DADB.wem</CachePath>
+					<CachePath>SFX/FootStepsLeft_9FADD60B.wem</CachePath>
 				</File>
 				<File Id="452281267" Language="SFX" Streaming="true" Location="Loose">
 					<ShortName>BassMusic.wav</ShortName>
@@ -137,74 +137,74 @@
 				<File Id="485869988" Language="SFX" Streaming="true" Location="Loose">
 					<ShortName>RestaurantAmbience.wav</ShortName>
 					<Path>Media/485869988.wem</Path>
-					<CachePath>SFX/RestaurantAmbience_6C1FC193.wem</CachePath>
+					<CachePath>SFX/RestaurantAmbience_53EC06CC.wem</CachePath>
 				</File>
 				<File Id="506101012" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Damage.wav</ShortName>
-					<CachePath>SFX/Damage_10C4C929.wem</CachePath>
+					<CachePath>SFX/Damage_B05EB4B9.wem</CachePath>
 				</File>
 				<File Id="522474302" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>StepOnWood2.wav</ShortName>
-					<CachePath>SFX/StepOnWood2_10C4C929.wem</CachePath>
+					<CachePath>SFX/StepOnWood2_B05EB4B9.wem</CachePath>
 				</File>
 				<File Id="561158872" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>StepOnWood5.wav</ShortName>
-					<CachePath>SFX/StepOnWood5_10C4C929.wem</CachePath>
+					<CachePath>SFX/StepOnWood5_B05EB4B9.wem</CachePath>
 				</File>
 				<File Id="617368685" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>StepOnWood3.wav</ShortName>
-					<CachePath>SFX/StepOnWood3_10C4C929.wem</CachePath>
+					<CachePath>SFX/StepOnWood3_B05EB4B9.wem</CachePath>
 				</File>
 				<File Id="619380089" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Crickets.wav</ShortName>
-					<CachePath>SFX/Crickets_50A1E827.wem</CachePath>
+					<CachePath>SFX/Crickets_E29A0738.wem</CachePath>
 				</File>
 				<File Id="733136199" Language="SFX" Streaming="true" Location="Loose">
 					<ShortName>Playground.wav</ShortName>
 					<Path>Media/733136199.wem</Path>
-					<CachePath>SFX/Playground_7E2BC24F.wem</CachePath>
+					<CachePath>SFX/Playground_4F951BFF.wem</CachePath>
 				</File>
 				<File Id="774176505" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>StepOnWood1.wav</ShortName>
-					<CachePath>SFX/StepOnWood1_10C4C929.wem</CachePath>
+					<CachePath>SFX/StepOnWood1_B05EB4B9.wem</CachePath>
 				</File>
 				<File Id="788579365" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>collectCoin.wav</ShortName>
-					<CachePath>SFX/collectCoin_10C4C929.wem</CachePath>
+					<CachePath>SFX/collectCoin_B05EB4B9.wem</CachePath>
 				</File>
 				<File Id="795206288" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Landing.wav</ShortName>
-					<CachePath>SFX/Landing_10C4C929.wem</CachePath>
+					<CachePath>SFX/Landing_B05EB4B9.wem</CachePath>
 				</File>
 				<File Id="882171577" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Boing.wav</ShortName>
-					<CachePath>SFX/Boing_10C4C929.wem</CachePath>
+					<CachePath>SFX/Boing_B05EB4B9.wem</CachePath>
 				</File>
 				<File Id="888997961" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>StepOnWood7.wav</ShortName>
-					<CachePath>SFX/StepOnWood7_10C4C929.wem</CachePath>
+					<CachePath>SFX/StepOnWood7_B05EB4B9.wem</CachePath>
 				</File>
 				<File Id="904371921" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>FootStepsRight.wav</ShortName>
-					<CachePath>SFX/FootStepsRight_35D1DADB.wem</CachePath>
+					<CachePath>SFX/FootStepsRight_9FADD60B.wem</CachePath>
 				</File>
 				<File Id="992041622" Language="SFX" Streaming="true" Location="Loose">
 					<ShortName>BirdsChirping.wav</ShortName>
 					<Path>Media/992041622.wem</Path>
-					<CachePath>SFX/BirdsChirping_D79FB2B7.wem</CachePath>
+					<CachePath>SFX/BirdsChirping_10AEC600.wem</CachePath>
 				</File>
 				<File Id="1024206037" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Doorbell.wav</ShortName>
-					<CachePath>SFX/Doorbell_10C4C929.wem</CachePath>
+					<CachePath>SFX/Doorbell_B05EB4B9.wem</CachePath>
 				</File>
 				<File Id="1031638431" Language="SFX" Streaming="true" Location="Loose">
 					<ShortName>StreetNoises.wav</ShortName>
 					<Path>Media/1031638431.wem</Path>
-					<CachePath>SFX/StreetNoises_358F59A9.wem</CachePath>
+					<CachePath>SFX/StreetNoises_F262CE96.wem</CachePath>
 				</File>
 				<File Id="1066634447" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>heavyBreathing.wav</ShortName>
-					<CachePath>SFX/heavyBreathing_144B8E59.wem</CachePath>
+					<CachePath>SFX/heavyBreathing_E998258E.wem</CachePath>
 				</File>
 			</Media>
 			<Plugins>
@@ -293,6 +293,9 @@
 					</MediaRefs>
 				</Event>
 				<Event Id="1733885923" Name="Play_walking" DurationType="Infinite">
+					<AuxBusRefs>
+						<AuxBusRef Id="2014821848" Name="IndoorReverb"/>
+					</AuxBusRefs>
 					<SwitchContainers>
 						<SwitchContainer>
 							<SwitchValue GroupType="Switch" GroupId="340271938" Id="4248645337"/>
@@ -367,86 +370,86 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3254967171" Type="User" Language="SFX" Hash="{5F922EF1-A79B-5AD1-A3BD-86BC5C11DB71}">
+		<SoundBank Id="3254967171" Type="User" Language="SFX" Hash="{35EADE5E-80DD-1DFC-E785-CB370A870120}">
 			<ShortName>indoor_sounds</ShortName>
 			<Path>indoor_sounds.bnk</Path>
 			<Media>
 				<File Id="26723888" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>StepRightGrass.wav</ShortName>
-					<CachePath>SFX/StepRightGrass_31AC151A.wem</CachePath>
+					<CachePath>SFX/StepRightGrass_DFD0C2AA.wem</CachePath>
 				</File>
 				<File Id="70300362" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>StepOnWood6.wav</ShortName>
-					<CachePath>SFX/StepOnWood6_10C4C929.wem</CachePath>
+					<CachePath>SFX/StepOnWood6_B05EB4B9.wem</CachePath>
 				</File>
 				<File Id="109592295" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Jump.wav</ShortName>
-					<CachePath>SFX/Jump_10C4C929.wem</CachePath>
+					<CachePath>SFX/Jump_B05EB4B9.wem</CachePath>
 				</File>
 				<File Id="142785782" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>StepOnWood4.wav</ShortName>
-					<CachePath>SFX/StepOnWood4_10C4C929.wem</CachePath>
+					<CachePath>SFX/StepOnWood4_B05EB4B9.wem</CachePath>
 				</File>
 				<File Id="189708257" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>StepLeftGrass.wav</ShortName>
-					<CachePath>SFX/StepLeftGrass_31AC151A.wem</CachePath>
+					<CachePath>SFX/StepLeftGrass_DFD0C2AA.wem</CachePath>
 				</File>
 				<File Id="278201078" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Hello.wav</ShortName>
-					<CachePath>SFX/Hello_10C4C929.wem</CachePath>
+					<CachePath>SFX/Hello_B05EB4B9.wem</CachePath>
 				</File>
 				<File Id="347083891" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Hearbeat.wav</ShortName>
-					<CachePath>SFX/Hearbeat_D79FB2B7.wem</CachePath>
+					<CachePath>SFX/Hearbeat_10AEC600.wem</CachePath>
 				</File>
 				<File Id="439914260" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>FootStepsLeft.wav</ShortName>
-					<CachePath>SFX/FootStepsLeft_35D1DADB.wem</CachePath>
+					<CachePath>SFX/FootStepsLeft_9FADD60B.wem</CachePath>
 				</File>
 				<File Id="522474302" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>StepOnWood2.wav</ShortName>
-					<CachePath>SFX/StepOnWood2_10C4C929.wem</CachePath>
+					<CachePath>SFX/StepOnWood2_B05EB4B9.wem</CachePath>
 				</File>
 				<File Id="543620922" Language="SFX" Streaming="true" Location="Loose">
 					<ShortName>RestaurantAmbience.wav</ShortName>
 					<Path>Media/543620922.wem</Path>
-					<CachePath>SFX/RestaurantAmbience_10C4C929.wem</CachePath>
+					<CachePath>SFX/RestaurantAmbience_F58AE4B6.wem</CachePath>
 				</File>
 				<File Id="561158872" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>StepOnWood5.wav</ShortName>
-					<CachePath>SFX/StepOnWood5_10C4C929.wem</CachePath>
+					<CachePath>SFX/StepOnWood5_B05EB4B9.wem</CachePath>
 				</File>
 				<File Id="592439996" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Bell.wav</ShortName>
-					<CachePath>SFX/Bell_10C4C929.wem</CachePath>
+					<CachePath>SFX/Bell_B05EB4B9.wem</CachePath>
 				</File>
 				<File Id="617368685" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>StepOnWood3.wav</ShortName>
-					<CachePath>SFX/StepOnWood3_10C4C929.wem</CachePath>
+					<CachePath>SFX/StepOnWood3_B05EB4B9.wem</CachePath>
 				</File>
 				<File Id="774176505" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>StepOnWood1.wav</ShortName>
-					<CachePath>SFX/StepOnWood1_10C4C929.wem</CachePath>
+					<CachePath>SFX/StepOnWood1_B05EB4B9.wem</CachePath>
 				</File>
 				<File Id="795206288" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Landing.wav</ShortName>
-					<CachePath>SFX/Landing_10C4C929.wem</CachePath>
+					<CachePath>SFX/Landing_B05EB4B9.wem</CachePath>
 				</File>
 				<File Id="888997961" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>StepOnWood7.wav</ShortName>
-					<CachePath>SFX/StepOnWood7_10C4C929.wem</CachePath>
+					<CachePath>SFX/StepOnWood7_B05EB4B9.wem</CachePath>
 				</File>
 				<File Id="904371921" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>FootStepsRight.wav</ShortName>
-					<CachePath>SFX/FootStepsRight_35D1DADB.wem</CachePath>
+					<CachePath>SFX/FootStepsRight_9FADD60B.wem</CachePath>
 				</File>
 				<File Id="1066634447" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>heavyBreathing.wav</ShortName>
-					<CachePath>SFX/heavyBreathing_144B8E59.wem</CachePath>
+					<CachePath>SFX/heavyBreathing_E998258E.wem</CachePath>
 				</File>
 				<File Id="1068521209" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>TakingOrder.wav</ShortName>
-					<CachePath>SFX/TakingOrder_10C4C929.wem</CachePath>
+					<CachePath>SFX/TakingOrder_B05EB4B9.wem</CachePath>
 				</File>
 			</Media>
 			<Plugins>
@@ -488,6 +491,9 @@
 					</MediaRefs>
 				</Event>
 				<Event Id="1733885923" Name="Play_walking" DurationType="Infinite">
+					<AuxBusRefs>
+						<AuxBusRef Id="2014821848" Name="IndoorReverb"/>
+					</AuxBusRefs>
 					<SwitchContainers>
 						<SwitchContainer>
 							<SwitchValue GroupType="Switch" GroupId="340271938" Id="4248645337"/>
@@ -537,5 +543,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{F2C6B879-D51A-F678-6DF0-7F2E712FE98C}</FileHash>
+	<FileHash>{7A7AE790-E028-1021-6105-B51346BB3F6A}</FileHash>
 </SoundBanksInfo>
