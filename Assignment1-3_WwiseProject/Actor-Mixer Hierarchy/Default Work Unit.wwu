@@ -40,7 +40,7 @@
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2CED83F5-9D66-4DE4-9941-C5F401994CC1}"/>
+							<ObjectRef Name="music" ID="{299A40D9-156C-456D-9A0E-FF3D14EED70F}" WorkUnitID="{2CED83F5-9D66-4DE4-9941-C5F401994CC1}"/>
 						</Reference>
 						<Reference Name="OutputBus">
 							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4DBC27A7-B3B6-41EA-B217-ED60E12C521B}"/>
@@ -135,9 +135,12 @@
 					</ReferenceList>
 					<ChildrenList>
 						<BlendContainer Name="backgroundNoise" ID="{E6B06C82-E4C6-4070-86B8-8F9C325E7FB2}" ShortID="530282988">
+							<PropertyList>
+								<Property Name="OverrideConversion" Type="bool" Value="True"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2CED83F5-9D66-4DE4-9941-C5F401994CC1}"/>
+									<ObjectRef Name="music" ID="{299A40D9-156C-456D-9A0E-FF3D14EED70F}" WorkUnitID="{2CED83F5-9D66-4DE4-9941-C5F401994CC1}"/>
 								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4DBC27A7-B3B6-41EA-B217-ED60E12C521B}"/>
@@ -388,6 +391,7 @@
 										<Value>True</Value>
 									</ValueList>
 								</Property>
+								<Property Name="OverrideConversion" Type="bool" Value="True"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
 										<Value>-9</Value>
@@ -396,7 +400,7 @@
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2CED83F5-9D66-4DE4-9941-C5F401994CC1}"/>
+									<ObjectRef Name="music" ID="{299A40D9-156C-456D-9A0E-FF3D14EED70F}" WorkUnitID="{2CED83F5-9D66-4DE4-9941-C5F401994CC1}"/>
 								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4DBC27A7-B3B6-41EA-B217-ED60E12C521B}"/>
@@ -997,7 +1001,7 @@
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2CED83F5-9D66-4DE4-9941-C5F401994CC1}"/>
+							<ObjectRef Name="music" ID="{299A40D9-156C-456D-9A0E-FF3D14EED70F}" WorkUnitID="{2CED83F5-9D66-4DE4-9941-C5F401994CC1}"/>
 						</Reference>
 						<Reference Name="OutputBus">
 							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4DBC27A7-B3B6-41EA-B217-ED60E12C521B}"/>
@@ -1033,7 +1037,50 @@
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2CED83F5-9D66-4DE4-9941-C5F401994CC1}"/>
+							<Custom CreatedFrom="{6D1B890C-9826-4384-BF07-C15223E9FB56}">
+								<Conversion Name="Default Conversion Settings (Custom)" ID="{48AFCD30-65D2-4605-9291-A3886C85ABEE}">
+									<PropertyList>
+										<Property Name="Channels" Type="int32">
+											<ValueList>
+												<Value Platform="Mac">4</Value>
+												<Value Platform="Windows">4</Value>
+											</ValueList>
+										</Property>
+										<Property Name="LRMix" Type="Real64">
+											<ValueList>
+												<Value Platform="Mac">0</Value>
+												<Value Platform="Windows">0</Value>
+											</ValueList>
+										</Property>
+										<Property Name="MaxSampleRate" Type="int32">
+											<ValueList>
+												<Value Platform="Mac">0</Value>
+												<Value Platform="Windows">0</Value>
+											</ValueList>
+										</Property>
+										<Property Name="MinSampleRate" Type="int32">
+											<ValueList>
+												<Value Platform="Mac">0</Value>
+												<Value Platform="Windows">0</Value>
+											</ValueList>
+										</Property>
+										<Property Name="SampleRate" Type="int32">
+											<ValueList>
+												<Value Platform="Mac">0</Value>
+												<Value Platform="Windows">0</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ConversionPluginInfoList>
+										<ConversionPluginInfo Platform="Mac">
+											<ConversionPlugin Name="" ID="{398F3BC8-0DB2-492A-BBDB-5A18DB3B4262}" PluginName="PCM" CompanyID="0" PluginID="1"/>
+										</ConversionPluginInfo>
+										<ConversionPluginInfo Platform="Windows">
+											<ConversionPlugin Name="" ID="{E2213F7B-24B4-414A-8BB7-C02159ED19A7}" PluginName="PCM" CompanyID="0" PluginID="1"/>
+										</ConversionPluginInfo>
+									</ConversionPluginInfoList>
+								</Conversion>
+							</Custom>
 						</Reference>
 						<Reference Name="OutputBus">
 							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4DBC27A7-B3B6-41EA-B217-ED60E12C521B}"/>
@@ -1265,7 +1312,7 @@
 				<BlendContainer Name="healthRepresentation" ID="{A42C44E6-5378-4F6B-9DD2-A00742D0BDB7}" ShortID="415612572">
 					<ReferenceList>
 						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{2CED83F5-9D66-4DE4-9941-C5F401994CC1}"/>
+							<ObjectRef Name="music" ID="{299A40D9-156C-456D-9A0E-FF3D14EED70F}" WorkUnitID="{2CED83F5-9D66-4DE4-9941-C5F401994CC1}"/>
 						</Reference>
 						<Reference Name="OutputBus">
 							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4DBC27A7-B3B6-41EA-B217-ED60E12C521B}"/>

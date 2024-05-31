@@ -53,12 +53,10 @@ public class SoundManager : MonoBehaviour
         UnloadBankForScene(currentSceneName);
         currentSceneName = scene.name;
         LoadBankForScene(currentSceneName);
-        Debug.LogWarning(currentSceneName);
 
 
         if (currentSceneName == "FirstScene")
         {
-            Debug.LogWarning("Background");
             AkSoundEngine.SetState("background", "backgroundNoise");
             backgroundId = AkSoundEngine.PostEvent("Play_background", gameObject);
             AkSoundEngine.StopPlayingID(restaurantAmbienceId);
@@ -69,7 +67,6 @@ public class SoundManager : MonoBehaviour
         {
             AkSoundEngine.StopPlayingID(backgroundId);
 
-            Debug.LogWarning("HHHELELEOFIEHJFOIE");
             AkSoundEngine.SetSwitch("walking", "wood", gameObject);
 
             AkSoundEngine.PostEvent("Play_Bell", gameObject);

@@ -12,6 +12,9 @@ public class FollowObject : MonoBehaviour
 
     private Vector3 offsetOfFollowObjectAndOwnObject;
 
+    private float fixYOffset;
+    private float distance;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,12 +25,22 @@ public class FollowObject : MonoBehaviour
         }
         otherObjectTransform = objectToFollow.GetComponent<Transform>();
         ownObjectTransform = gameObject.GetComponent<Transform>();
+        fixYOffset = ownObjectTransform.position.y - otherObjectTransform.position.y;
+        distance = Vector3.Distance(ownObjectTransform.position, otherObjectTransform.position);
+        SetOffset();
+    }
+
+    public void SetOffset()
+    {
         offsetOfFollowObjectAndOwnObject = ownObjectTransform.position - otherObjectTransform.position;
+        offsetOfFollowObjectAndOwnObject.Normalize();
+        offsetOfFollowObjectAndOwnObject *= distance;
+        offsetOfFollowObjectAndOwnObject.y = fixYOffset;
     }
 
     // Update is called once per frame
     void Update()
     {
-        ownObjectTransform.position = otherObjectTransform.position + offsetOfFollowObjectAndOwnObject;
+        gameObject.transform.position = otherObjectTransform.position + offsetOfFollowObjectAndOwnObject;
     }
 }

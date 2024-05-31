@@ -17,6 +17,8 @@ TagManager:
   - RestaurantAmbientTrigger
   - IndoorReverbTrigger
   - ReverbZone
+  - CarRayHit
+  - TurnCar
   layers:
   - Default
   - TransparentFX

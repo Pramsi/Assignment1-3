@@ -23,6 +23,13 @@ public class Movement : MonoBehaviour
 
     [SerializeField]
     private float _jumpPower = 1;
+
+    [SerializeField]
+    private float jumpingMaxHeight = .5f;
+
+    [SerializeField]
+    private float fallFactor = .9f;
+
    
     private Vector3 movementDirection3d;
     private Rigidbody _rigidbody;
@@ -50,6 +57,7 @@ public class Movement : MonoBehaviour
             return;
 
         _rigidbody = gameObject.GetComponent<Rigidbody>();
+        StartCoroutine(FallControlFlow());
     }
 
 
@@ -91,17 +99,31 @@ public class Movement : MonoBehaviour
 
     private void PerformMovement()
     {
+
         // Get movement input from Unity's new input system
-        Vector3 movementDirection = new Vector3(
+        Vector3 movementDirection3d = new Vector3(
             Keyboard.current.dKey.ReadValue() - Keyboard.current.aKey.ReadValue(),
             0f,
             Keyboard.current.wKey.ReadValue() - Keyboard.current.sKey.ReadValue()
         ).normalized;
 
-        _isMoving = movementDirection != Vector3.zero;
+
+        if(movementDirection3d != Vector3.zero)
+        {
+            transform.forward = Camera.main.transform.forward;
+            Quaternion cameraAlignedForwardRotation = transform.rotation;
+            transform.forward = movementDirection3d;
+            transform.rotation *= cameraAlignedForwardRotation;
+
+        }
+
+        _isMoving = movementDirection3d != Vector3.zero;
+
+        float movementStrength = Vector3.Magnitude(movementDirection3d);
+        gameObject.transform.Translate(new Vector3(0, 0, 1) * _velocity * Time.deltaTime * movementStrength);
 
         // Move the player based on the input direction and velocity
-        _rigidbody.MovePosition(transform.position + (movementDirection * -1) * _velocity * Time.deltaTime);
+        //_rigidbody.MovePosition(transform.position + (movementDirection * -1) * _velocity * Time.deltaTime);
 
         if (_isMoving && !_isLanding)
         {
@@ -117,32 +139,74 @@ public class Movement : MonoBehaviour
 
 
     void OnJump(InputValue inputValue)
-    {
+    {         
+        
+
         if(_isGrounded)
         {
             AkSoundEngine.PostEvent("Play_jump", gameObject);
-            _rigidbody.AddForce(new Vector3(0, _jumpPower, 0), ForceMode.Impulse);
-            _isGrounded = false;
-            _isLanding = true;
+
+            StartCoroutine(JumpControlFlow());
+            //_isGrounded = false;
+            //_isLanding = true;
             AkSoundEngine.StopPlayingID((uint)walkingId);
             walkingId = -1;
         }
     }
 
+    private IEnumerator JumpControlFlow()
+    {
+        _isLanding = true;
+        float jumpHeight = transform.position.y + jumpingMaxHeight;
+        _rigidbody.AddForce(Vector3.up * _jumpPower, ForceMode.Force);
+        
+        while(transform.position.y < jumpHeight)
+        {
+            yield return null;
+        }
+
+        _rigidbody.AddForce(new Vector3(0, _jumpPower* -1 * fallFactor, 0), ForceMode.Force);
+
+    }
+
+    private IEnumerator FallControlFlow()
+    {
+        RaycastHit hit;
+
+        float prevY;
+        float currentY = transform.position.y;
+        // StopCoroutine(JumpControlFlow());
+        while (true)
+        {
+            bool raycastSuccess = Physics.Raycast(transform.position, transform.up * -1, out hit);
+            if(raycastSuccess && hit.collider.gameObject.CompareTag("Grounded") && hit.distance <= .50001f)
+            {
+                _isGrounded = true;
+                StopCoroutine(JumpControlFlow());
+                _isLanding = false;
+            }
+            else
+            {
+                _isGrounded = false;
+            }
+            yield return null;
+        }
+        
+
+    }
+
 
     void OnCollisionEnter(Collision other)
     {
-        Debug.Log(other.gameObject.name);
-
 
         if (other.gameObject.tag == "Grounded")
         {
-            _isGrounded = true;
+            //_isGrounded = true;
             if (_isLanding)
             {
                 AkSoundEngine.PostEvent("Play_landing", gameObject);
             }
-            _isLanding = false;
+            //_isLanding = false;
 
         }
         
@@ -208,7 +272,8 @@ public class Movement : MonoBehaviour
             AkSoundEngine.StopPlayingID((uint)walkingId);
             walkingId = -1;
             _isGrounded = false;
-            _rigidbody.AddForce(new Vector3(0, _jumpPower*1.5f, 0), ForceMode.Impulse);
+            StartCoroutine(FallControlFlow());
+            //_rigidbody.AddForce(new Vector3(0, _jumpPower*.5f, 0), ForceMode.Impulse);
 
             AkSoundEngine.PostEvent("Play_boing", gameObject);
         }
