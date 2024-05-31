@@ -31,6 +31,10 @@ public class Movement : MonoBehaviour
     private float fallFactor = .9f;
 
    
+
+    [SerializeField]
+    private Animator animator;
+   
     private Vector3 movementDirection3d;
     private Rigidbody _rigidbody;
 
@@ -99,6 +103,13 @@ public class Movement : MonoBehaviour
 
     private void PerformMovement()
     {
+        
+        //if(movementDirection3d == Vector3.zero)
+        //{
+        //    animator.SetBool("isWalking", false);
+        //    return;
+        //}
+
 
         // Get movement input from Unity's new input system
         Vector3 movementDirection3d = new Vector3(
@@ -129,11 +140,15 @@ public class Movement : MonoBehaviour
         {
             // Call a method to play walking sounds
             PlayWalkingSounds();
+            animator.SetBool("isWalking", true);
         }
         else
         {
             // Stop walking sounds when the player is not moving
             StopWalkingSounds();
+            animator.SetBool("isWalking", false);
+
+
         }
     }
 
@@ -144,6 +159,8 @@ public class Movement : MonoBehaviour
 
         if(_isGrounded)
         {
+            animator.SetBool("isJumping", true);
+
             AkSoundEngine.PostEvent("Play_jump", gameObject);
 
             StartCoroutine(JumpControlFlow());
@@ -204,6 +221,8 @@ public class Movement : MonoBehaviour
             //_isGrounded = true;
             if (_isLanding)
             {
+                animator.SetBool("isJumping", false);
+
                 AkSoundEngine.PostEvent("Play_landing", gameObject);
             }
             //_isLanding = false;
