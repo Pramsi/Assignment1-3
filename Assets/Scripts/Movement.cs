@@ -24,17 +24,12 @@ public class Movement : MonoBehaviour
     [SerializeField]
     private float _jumpPower = 1;
 
-    [SerializeField]
-    private float jumpingMaxHeight = .5f;
+    //[SerializeField]
+    //private ForceMode _selectedForceMode;
 
-    [SerializeField]
-    private float fallFactor = .9f;
-
-   
-
-    [SerializeField]
-    private Animator animator;
-   
+    //[SerializeField]
+    //private MovementType movementType;
+    
     private Vector3 movementDirection3d;
     private Rigidbody _rigidbody;
 
@@ -52,24 +47,34 @@ public class Movement : MonoBehaviour
     private uint outdoorRestaurantAmbienceId;
 
     private int walkingId = -1;
+    //private int movementKeysPressed = 0;
+
 
 
     // Start is called before the first frame update
     void Start()
-    {        
+    {
+        
         if (_rigidbody != null)
             return;
 
         _rigidbody = gameObject.GetComponent<Rigidbody>();
-        StartCoroutine(FallControlFlow());
+           
+
     }
 
 
     // Update is called once per frame
     void Update()
     {
+
+
+        
+
         PerformMovement();
         _isMoving = CheckIfMoving();
+
+
     }
 
 
@@ -99,6 +104,7 @@ public class Movement : MonoBehaviour
         AkSoundEngine.StopPlayingID((uint)walkingId);
         walkingId = -1; // Reset walkingId
         _isWalkingSoundPlaying = false;
+
     }
 
     private void PerformMovement()
@@ -136,7 +142,7 @@ public class Movement : MonoBehaviour
         // Move the player based on the input direction and velocity
         //_rigidbody.MovePosition(transform.position + (movementDirection * -1) * _velocity * Time.deltaTime);
 
-        if (_isMoving && !_isLanding)
+        if (_isMoving)
         {
             // Call a method to play walking sounds
             PlayWalkingSounds();
@@ -152,6 +158,53 @@ public class Movement : MonoBehaviour
         }
     }
 
+    //void PerformMovement()
+    //{
+    //    if(movementType == MovementType.TransformBased)
+    //    {
+    //    gameObject.transform.position += movementDirection3d * _velocity;
+
+    //    } else if(movementType == MovementType.PhysicsBased)
+    //    {
+    //    _rigidbody.AddForce(movementDirection3d, _selectedForceMode);
+    //    }
+        
+        
+    //}
+
+    //void OnMovement(InputValue inputValue)
+    //{
+    //    Vector2 movementDirection = inputValue.Get<Vector2>();
+    //    movementDirection3d = new Vector3(movementDirection.x, 0, movementDirection.y);
+
+    //    if (_isGrounded)
+    //    {
+    //        // Check if any of the movement keys are pressed down
+    //        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.D))
+    //        {
+    //            movementKeysPressed++;
+
+    //            // Play walking sound only if it's not already playing
+    //            if (walkingId == -1)
+    //            {
+    //                walkingId = (int)AkSoundEngine.PostEvent("Play_walking", gameObject);
+                     
+    //            }
+    //        }
+
+    //        if (Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.D))
+    //        {
+    //            movementKeysPressed--;
+
+    //            if (movementKeysPressed == 0)
+    //            {
+    //                AkSoundEngine.StopPlayingID((uint)walkingId);
+    //                walkingId = -1; // Reset walkingId
+    //            }
+    //        }
+
+    //    }
+    //}
 
     void OnJump(InputValue inputValue)
     {         
@@ -169,6 +222,7 @@ public class Movement : MonoBehaviour
             AkSoundEngine.StopPlayingID((uint)walkingId);
             walkingId = -1;
         }
+        
     }
 
     private IEnumerator JumpControlFlow()
@@ -216,6 +270,7 @@ public class Movement : MonoBehaviour
     void OnCollisionEnter(Collision other)
     {
 
+
         if (other.gameObject.tag == "Grounded")
         {
             //_isGrounded = true;
@@ -249,6 +304,9 @@ public class Movement : MonoBehaviour
             AkSoundEngine.SetSwitch("walking", "wood", gameObject);
 
         }
+
+
+
     }
 
     private void OnTriggerEnter(Collider other)

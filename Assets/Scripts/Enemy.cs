@@ -10,6 +10,8 @@ public class Enemy : MonoBehaviour
             PlayerInventory.Instance.localPlayerData.health -= healthDecrease;
             PlayerInventory.Instance.SavePlayerData();
             AkSoundEngine.SetRTPCValue("health", GameManager.Instance.savedPlayerData.health);
+
+
         }
     }
 }
